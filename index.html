@@ -62,7 +62,7 @@ button{font-family:inherit}
 .fl.in svg{animation:sway 7s ease-in-out calc(var(--d,0s) * -4) infinite}
 
 /* opening */
-- .opening{position:relative;min-height:calc(100svhenv(safe-area-inset-top,
+.opening{position:relative;min-height:calc(100svhenv(safe-area-inset-top,
 0px) - env(safe-area-inset-bottom,0px));display:flex;align-items:center;overflow:hidden;
   background:radial-gradient(60% 38% at 18% 8%,#ffd8bd 0,transparent 70%),radial-gradient(50% 38% at 88% 18%,#dcd0f3 0,transparent 70%),radial-gradient(70% 45% at 50% 100%,#cfe5f6 0,transparent 72%),#fff3ee;
   transition:opacity .9s ease,transform .9s ease,filter .9s ease}
@@ -267,7 +267,7 @@ html[data-setup] .setup-only{display:block}
         <span class="fl" data-k="tulip" style="--s:88px;--d:.65s"></span>
         <span class="fl" data-k="white" style="--s:70px;--d:.9s"></span>
       </div>
-      <h1 id="hello">Hey, my friend... 🌷</h1>
+      <h1 id="hello">Hey, Tanu 🌷</h1>
       <p class="hand">There's something I've wanted to tell you.</p>
       <div class="env" id="env" aria-hidden="true">
         <div class="back"></div><div class="paper">for you</div><div class="front"></div><div class="flap"></div>
@@ -280,7 +280,7 @@ html[data-setup] .setup-only{display:block}
     <!-- 2. Apology -->
     <section class="page apology" id="apology" aria-labelledby="apH">
       <div class="wrap">
-        <h2 id="apH" class="rev">I'm Really Sorry, My Friend...</h2>
+        <h2 id="apH" class="rev">I'm Really Sorry, Tanu...</h2>
         <article class="letter">
           <p class="rev" style="--i:0">Sometimes we make mistakes. Sometimes our words or actions hurt people we never wanted to hurt.</p>
           <p class="rev" style="--i:0">I know things may not be the same right now, and I understand that.</p>
@@ -514,11 +514,34 @@ resize();window.addEventListener('resize',resize);
 if(!reduce){var cnt=W<600?12:20;for(var i=0;i<cnt;i++)petals.push(ambient(true));startPetals();
   document.addEventListener('visibilitychange',function(){if(document.hidden){cancelAnimationFrame(raf);running=false}else startPetals()})}
 
+/* ---------- background music ---------- */
+var music=$('#musicAudio'),fab=$('#musicFab'),mMissing=false,mLbl=$('#musicLbl');
+music.volume=.4;
+music.addEventListener('error',function(){mMissing=true});
+function syncMusic(){var on=!music.paused;fab.setAttribute('aria-pressed',on?'true':'false');fab.setAttribute('aria-label',on?'Pause background music':'Play soft background music');mLbl.textContent=on?'Music on':'Music'}
+function pauseMusic(){if(!music.paused){music.pause()}syncMusic()}
+music.addEventListener('play',syncMusic);music.addEventListener('pause',syncMusic);
+fab.addEventListener('click',function(){
+  if(mMissing||music.error){toast("The background music hasn't been added yet.");return}
+  if(music.paused){var pr=music.play();if(pr&&pr.catch)pr.catch(function(){toast("The music couldn't start. Please try again.")})}else music.pause()});
+
 /* ---------- opening ---------- */
-var opening=$('#opening'),journey=$('#journey'),openBtn=$('#openBtn'),env=$('#env'),fab=$('#musicFab'),opened=false;
-function showJourney(){opening.hidden=true;journey.hidden=false;journey.classList.add('entering');fab.hidden=false;window.scrollTo(0,0)}
+var opening=$('#opening'),journey=$('#journey'),openBtn=$('#openBtn'),env=$('#env'),opened=false;
+function showJourney(){
+  opening.hidden=true;
+  journey.hidden=false;
+  journey.classList.add('entering');
+  fab.hidden=false;
+  window.scrollTo(0,0);
+}
 openBtn.addEventListener('click',function(){
   if(opened)return;opened=true;
+  // Trigger music play on the initial user interaction
+  if(!mMissing && !music.error) {
+    var pr = music.play();
+    if(pr && pr.catch) pr.catch(function(){}); // fail silently if browser blocks autoplay
+  }
+  
   if(reduce){showJourney();return}
   openBtn.classList.add('pressed');env.classList.add('open');
   setTimeout(function(){opening.classList.add('leaving')},1100);
@@ -537,7 +560,7 @@ $$('input[data-photo]').forEach(function(inp){inp.addEventListener('change',func
 (function(){var im=$('#flowersPng');if(!im)return;im.addEventListener('load',function(){im.hidden=false});im.addEventListener('error',function(){im.hidden=true})})();
 
 /* ---------- voice player ---------- */
-var voice=$('#voiceAudio'),music=$('#musicAudio'),player=$('#player'),playBtn=$('#playBtn'),seek=$('#seek'),tCur=$('#tCur'),tDur=$('#tDur'),vMsg=$('#voiceMsg'),waveEl=$('#wave'),replayBtn=$('#replay');
+var voice=$('#voiceAudio'),player=$('#player'),playBtn=$('#playBtn'),seek=$('#seek'),tCur=$('#tCur'),tDur=$('#tDur'),vMsg=$('#voiceMsg'),waveEl=$('#wave'),replayBtn=$('#replay');
 var N=44,bars=[],vMissing=false,vRaf=0;
 for(var b=0;b<N;b++){var el=document.createElement('i');el.style.setProperty('--k',b);el.style.setProperty('--h',(.26+.74*Math.abs(Math.sin(b*1.7)*Math.cos(b*.53))).toFixed(3));waveEl.appendChild(el);bars.push(el)}
 function fmt(s){if(!isFinite(s)||s<0)s=0;return Math.floor(s/60)+':'+('0'+Math.floor(s%60)).slice(-2)}
@@ -563,17 +586,6 @@ function realWave(src){
       for(var i=0;i<N;i++){var m=0,inc=Math.max(1,Math.floor(step/300));for(var j=i*step;j<(i+1)*step;j+=inc){var v=Math.abs(d[j]);if(v>m)m=v}pk.push(m);if(m>mx)mx=m}
       if(!mx)return;pk.forEach(function(v,i){bars[i].style.setProperty('--h',(.16+.84*Math.pow(v/mx,.7)).toFixed(3))})
     }).catch(function(){})}catch(e){}}
-
-/* ---------- background music ---------- */
-var mMissing=false,mLbl=$('#musicLbl');
-music.volume=.4;
-music.addEventListener('error',function(){mMissing=true});
-function syncMusic(){var on=!music.paused;fab.setAttribute('aria-pressed',on?'true':'false');fab.setAttribute('aria-label',on?'Pause background music':'Play soft background music');mLbl.textContent=on?'Music on':'Music'}
-function pauseMusic(){if(!music.paused){music.pause()}syncMusic()}
-music.addEventListener('play',syncMusic);music.addEventListener('pause',syncMusic);
-fab.addEventListener('click',function(){
-  if(mMissing||music.error){toast("The background music hasn't been added yet.");return}
-  if(music.paused){var pr=music.play();if(pr&&pr.catch)pr.catch(function(){toast("The music couldn't start. Please try again.")})}else music.pause()});
 
 /* ---------- forgiveness ---------- */
 var yes=$('#yesBtn'),later=$('#timeBtn'),reply=$('#reply');
