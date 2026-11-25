@@ -121,6 +121,8 @@ html[data-setup] .setup-only{display:block}
 .wish{background:linear-gradient(180deg,#fde4ec,#e9f3fb)}
 .duo{width:min(100%,380px);height:auto;overflow:visible}
 .wish .copy{display:flex;flex-direction:column;gap:1em;max-width:34ch;font-family:var(--serif);font-size:1.15rem;line-height:1.7;text-wrap:pretty}
+.feather-note{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:16px;padding-top:24px;border-top:1.5px dashed rgba(111,90,174,.25);width:100%;max-width:34ch}
+.feather-svg{width:64px;height:auto;overflow:visible;animation:sway 6s ease-in-out infinite}
 
 /* toast */
 #toast{position:fixed;z-index:30;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);max-width:min(88vw,380px);background:#3f3047;color:#fff;font:500 .92rem/1.4 var(--sans);padding:12px 16px;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;text-align:center}
@@ -322,7 +324,6 @@ html[data-setup] .setup-only{display:block}
           <rect x="208" y="144" width="14" height="56" rx="7" fill="#c7b8ea"/><rect x="226" y="144" width="14" height="56" rx="7" fill="#c7b8ea"/>
           <ellipse cx="215" cy="203" rx="12" ry="5.5" fill="#6d5a8c"/><ellipse cx="233" cy="203" rx="12" ry="5.5" fill="#6d5a8c"/>
           <rect x="200" y="98" width="48" height="58" rx="20" fill="#cfe5f6"/>
-          <!-- Added long hair behind the head -->
           <path d="M200 76 v34 c0 10 5 16 12 16 h24 c7 0 12 -6 12 -16 v-34 z" fill="#3f3047"/>
           <circle cx="224" cy="76" r="22" fill="#f3cfae"/>
           <path d="M202 76a22 22 0 0 1 44 0c-4-7-10-9-22-9s-18 2-22 9z" fill="#3f3047"/>
@@ -338,6 +339,19 @@ html[data-setup] .setup-only{display:block}
           <p>If someday you feel comfortable talking to me again, you can unblock me.</p>
           <p>I'd be happy to talk, listen, laugh, and hopefully create better memories together.</p>
           <p>No pressure, no expectations. Your peace and happiness matter.</p>
+        </div>
+
+        <div class="feather-note rev">
+          <svg class="feather-svg" viewBox="0 0 80 140" role="img" aria-label="A peacock feather">
+            <path d="M40 136 Q38 92 40 36" fill="none" stroke="#c8a24e" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M40 10 C14 14 8 44 18 70 C24 86 35 96 40 104 C45 96 56 86 62 70 C72 44 66 14 40 10 Z" fill="#63b5a4" opacity=".88"/>
+            <ellipse cx="40" cy="46" rx="18" ry="24" fill="#e6c46d"/>
+            <ellipse cx="40" cy="47" rx="12" ry="16" fill="#2d7f8c"/>
+            <ellipse cx="40" cy="50" rx="6.5" ry="9" fill="#3b2f6e"/>
+            <circle cx="38" cy="46" r="2.2" fill="#fff" opacity=".85"/>
+          </svg>
+          <p class="hand">And this peacock feather is for you — a quiet wish for peace, grace, and a smile whenever you see it.</p>
+          <p class="tiny">A genuine sorry from one friend to another. 🌸</p>
         </div>
       </div>
     </section>
