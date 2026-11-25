@@ -62,8 +62,7 @@ button{font-family:inherit}
 .fl.in svg{animation:sway 7s ease-in-out calc(var(--d,0s) * -4) infinite}
 
 /* opening */
-.opening{position:relative;min-height:calc(100svhenv(safe-area-inset-top,
-0px) - env(safe-area-inset-bottom,0px));display:flex;align-items:center;overflow:hidden;
+.opening{position:relative;min-height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));display:flex;align-items:center;overflow:hidden;
   background:radial-gradient(60% 38% at 18% 8%,#ffd8bd 0,transparent 70%),radial-gradient(50% 38% at 88% 18%,#dcd0f3 0,transparent 70%),radial-gradient(70% 45% at 50% 100%,#cfe5f6 0,transparent 72%),#fff3ee;
   transition:opacity .9s ease,transform .9s ease,filter .9s ease}
 .opening.leaving{opacity:0;transform:scale(1.06);filter:blur(10px)}
@@ -113,29 +112,8 @@ html[data-setup] .setup-only{display:block}
 .opt-img{max-width:min(100%,360px);height:auto;border-radius:18px}
 .bouquet .lede{max-width:30ch}
 
-/* voice */
-.voice{background:linear-gradient(180deg,#e1effb,#fff1e4)}
-.player{width:100%;background:rgba(255,255,255,.85);border-radius:28px;padding:26px clamp(18px,5vw,30px) 22px;box-shadow:0 26px 44px -26px rgba(90,70,140,.55);display:flex;flex-direction:column;gap:14px}
-.wave{display:flex;align-items:center;justify-content:space-between;gap:3px;height:76px}
-.wave i{flex:1;max-width:8px;min-width:2px;height:calc(var(--h)*100%);border-radius:99px;background:#e2d9f3;transform-origin:center;transition:background .25s}
-.wave i.on{background:linear-gradient(#f08aa9,#c9a0e8)}
-.player.playing .wave i{animation:bob .9s ease-in-out calc(var(--k)*-70ms) infinite}
-#seek{width:100%;height:28px;margin:0;accent-color:var(--rose);cursor:pointer;touch-action:none}
-.times{display:flex;justify-content:space-between;font:500 .9rem var(--sans);color:var(--ink-soft);font-variant-numeric:tabular-nums;margin-top:-6px}
-.ctrls{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
-.play{width:78px;height:78px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;color:#3a2a40;background:linear-gradient(135deg,#f6a6bf,#ffcaa9);box-shadow:0 14px 26px -10px rgba(217,113,143,.9);transition:transform .25s}
-.play:hover{transform:scale(1.06)}
-.play svg{width:32px;height:32px;fill:currentColor;grid-area:1/1}
-.play .i-pause{display:none}
-.player.playing .play .i-play{display:none}
-.player.playing .play .i-pause{display:block}
-.player.playing .play{animation:pulse 2.4s ease-in-out infinite}
-.icon-btn{justify-self:start;width:48px;height:48px;border-radius:50%;border:2px solid var(--lilac);background:#fff;color:#4a3b78;cursor:pointer;display:grid;place-items:center}
-.icon-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.note{font-size:.95rem;color:var(--ink-soft);background:#fff4e6;border-radius:14px;padding:12px 14px}
-
 /* forgiveness */
-.forgive{background:linear-gradient(180deg,#fff1e4,#fde4ec)}
+.forgive{background:linear-gradient(180deg,#e1effb,#fde4ec)}
 .forgive .copy{display:flex;flex-direction:column;gap:1em;max-width:36ch;font-family:var(--serif);font-size:1.125rem;line-height:1.7;color:var(--ink);text-wrap:pretty}
 .choices{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;position:relative}
 .reply{min-height:3.6em;max-width:32ch;font-family:var(--hand);font-size:1.7rem;line-height:1.2;color:var(--iris);opacity:0;transform:translateY(8px);transition:opacity .8s,transform .8s}
@@ -156,21 +134,11 @@ html[data-setup] .setup-only{display:block}
 .moon{position:absolute;top:150px;right:max(7%,16px);width:78px;height:78px;border-radius:50%;z-index:1;
   background:radial-gradient(circle at 35% 35%,#fffbe6,#ffeebd 60%,#f0d48c);box-shadow:0 0 40px 14px rgba(255,238,189,.55),0 0 120px 40px rgba(255,238,189,.25)}
 .night-fl{position:absolute;z-index:1;opacity:.9;animation:floaty 9s ease-in-out var(--dl,0s) infinite}
-.clock{position:relative;padding:22px clamp(22px,7vw,40px);border-radius:28px;background:linear-gradient(160deg,#1b2158,#10153d);border:2px solid rgba(220,190,120,.7);box-shadow:0 0 0 6px rgba(255,255,255,.07),0 24px 50px -16px rgba(0,0,10,.6),0 0 60px -10px rgba(255,231,168,.35)}
-.clock b{display:block;font:400 clamp(3rem,15vw,4.6rem)/1 var(--mono);color:#ffe7a8;text-shadow:0 0 18px rgba(255,220,140,.75);letter-spacing:.04em;white-space:nowrap}
-.clock b span{animation:blink 3s ease-in-out infinite}
 .night .central{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:#e7defa;max-width:30ch}
 .final{font-family:var(--hand);font-size:clamp(1.9rem,7.4vw,2.6rem);font-weight:700;line-height:1.2;color:#fff;text-shadow:0 0 22px rgba(255,200,230,.55)}
 
-/* music button + toast */
-#musicFab{position:fixed;z-index:20;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:9px;min-height:48px;padding:0 18px 0 14px;border-radius:999px;border:2px solid rgba(255,255,255,.9);background:rgba(255,250,246,.92);color:#4a3b78;font:700 .92rem var(--sans);cursor:pointer;box-shadow:0 12px 26px -10px rgba(90,60,130,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-#musicFab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-#musicFab .eq{display:none;gap:2px;align-items:flex-end;height:16px}
-#musicFab .eq i{width:3px;background:var(--rose);border-radius:2px;animation:eq .8s ease-in-out infinite}
-#musicFab .eq i:nth-child(2){animation-delay:-.3s}#musicFab .eq i:nth-child(3){animation-delay:-.6s}
-#musicFab[aria-pressed="true"] .eq{display:flex}
-#musicFab[aria-pressed="true"] .note-ic{display:none}
-#toast{position:fixed;z-index:30;left:50%;bottom:calc(76px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);max-width:min(88vw,380px);background:#3f3047;color:#fff;font:500 .92rem/1.4 var(--sans);padding:12px 16px;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;text-align:center}
+/* toast */
+#toast{position:fixed;z-index:30;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);max-width:min(88vw,380px);background:#3f3047;color:#fff;font:500 .92rem/1.4 var(--sans);padding:12px 16px;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;text-align:center}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 
 /* setup (owner only) */
@@ -193,12 +161,8 @@ html[data-setup] .setup-only{display:block}
 
 @keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
 @keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
-@keyframes bob{0%,100%{transform:scaleY(.72)}50%{transform:scaleY(1.12)}}
-@keyframes pulse{0%,100%{box-shadow:0 14px 26px -10px rgba(217,113,143,.9),0 0 0 0 rgba(246,166,191,.55)}50%{box-shadow:0 14px 26px -10px rgba(217,113,143,.9),0 0 0 16px rgba(246,166,191,0)}}
 @keyframes press{0%{transform:scale(1)}40%{transform:scale(.93)}100%{transform:scale(1.04)}}
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-22px) rotate(5deg)}}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
-@keyframes eq{0%,100%{height:4px}50%{height:16px}}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 #journey.entering{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
 
@@ -223,8 +187,6 @@ html[data-setup] .setup-only{display:block}
     <div class="box">
       <h3>Files the page looks for</h3>
       <ul>
-        <li><code>audio/apology.mp3</code> your voice message</li>
-        <li><code>audio/music.mp3</code> soft instrumental music</li>
         <li><code>images/friendship1.jpg</code>, <code>friendship2.jpg</code>, <code>friendship3.jpg</code> the three photos</li>
         <li><code>images/flowers.png</code> optional picture in the bouquet section</li>
       </ul>
@@ -234,8 +196,6 @@ html[data-setup] .setup-only{display:block}
     <div class="box">
       <h3>Try your files on this device first</h3>
       <p class="status">These previews live only in this browser tab. They are not published.</p>
-      <label for="prevVoice">Voice message<input type="file" id="prevVoice" accept="audio/*"></label>
-      <label for="prevMusic">Background music<input type="file" id="prevMusic" accept="audio/*"></label>
       <p class="status">Photos: use the Replace photo button under each Polaroid below.</p>
       <div class="row"><button class="btn ghost" id="skipOpen" type="button">Skip the opening and look around</button></div>
     </div>
@@ -335,31 +295,7 @@ html[data-setup] .setup-only{display:block}
       </div>
     </section>
 
-    <!-- 5. Voice -->
-    <section class="page voice" id="voice" aria-labelledby="vH">
-      <div class="wrap">
-        <h2 id="vH" class="rev">A Little Message From Me...</h2>
-        <p class="lede rev">I thought it would be better if you heard this in my own voice.</p>
-        <div class="player rev" id="player">
-          <audio id="voiceAudio" preload="metadata" src="audio/apology.mp3" playsinline></audio>
-          <div class="wave" id="wave" aria-hidden="true"></div>
-          <input type="range" id="seek" min="0" max="1000" value="0" step="1" aria-label="Seek through the voice message">
-          <div class="times"><span id="tCur">0:00</span><span id="tDur">0:00</span></div>
-          <div class="ctrls">
-            <button class="icon-btn" id="replay" type="button" aria-label="Replay from the start"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></button>
-            <button class="play" id="playBtn" type="button" aria-label="Play voice message">
-              <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
-              <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4.2" height="14" rx="1.4"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.4"/></svg>
-            </button>
-            <span></span>
-          </div>
-          <p class="note" id="voiceMsg" role="status" hidden>This voice message isn't ready to play yet.</p>
-        </div>
-        <p class="hand rev">Sometimes it's easier to express feelings when we speak from the heart.</p>
-      </div>
-    </section>
-
-    <!-- 6. Forgiveness -->
+    <!-- 5. Forgiveness -->
     <section class="page forgive" id="forgive" aria-labelledby="fH">
       <div class="wrap">
         <h2 id="fH" class="rev">Can We Make Things Better? 🌸</h2>
@@ -377,7 +313,7 @@ html[data-setup] .setup-only{display:block}
       </div>
     </section>
 
-    <!-- 7. Wish -->
+    <!-- 6. Wish -->
     <section class="page wish" id="wish" aria-labelledby="wH">
       <div class="wrap">
         <h2 id="wH" class="rev">One Little Wish...</h2>
@@ -422,7 +358,7 @@ html[data-setup] .setup-only{display:block}
       </div>
     </section>
 
-    <!-- 8. Night -->
+    <!-- 7. Night -->
     <section class="night" id="night" aria-labelledby="nH">
       <div class="stars" id="stars" aria-hidden="true"></div>
       <div class="moon" aria-hidden="true"></div>
@@ -434,9 +370,7 @@ html[data-setup] .setup-only{display:block}
         <h2 id="nH" class="rev">If You Feel Like Talking...</h2>
         <div class="rev" style="display:flex;flex-direction:column;gap:1em;max-width:32ch;font-family:var(--serif);font-size:1.15rem;line-height:1.7">
           <p>If there's anything you want to say, I'll be here to listen.</p>
-          <p>I'll be waiting at 8:00 PM, only if you feel comfortable talking.</p>
         </div>
-        <div class="clock rev" role="img" aria-label="8:00 PM"><b aria-hidden="true">8<span>:</span>00 PM</b></div>
         <div class="rev" style="display:flex;flex-direction:column;gap:1em;max-width:32ch;font-family:var(--serif);font-size:1.1rem;line-height:1.7">
           <p>Whatever happens, I genuinely wish you happiness, peace, and countless reasons to smile.</p>
           <p>Thank you for being a part of my journey.</p>
@@ -447,13 +381,6 @@ html[data-setup] .setup-only{display:block}
     </section>
   </div>
 </main>
-
-<audio id="musicAudio" preload="none" loop src="audio/music.mp3" playsinline></audio>
-<button id="musicFab" type="button" aria-pressed="false" aria-label="Play soft background music" hidden>
-  <svg class="note-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
-  <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
-  <span id="musicLbl">Music</span>
-</button>
 
 <script>
 (function(){
@@ -514,34 +441,16 @@ resize();window.addEventListener('resize',resize);
 if(!reduce){var cnt=W<600?12:20;for(var i=0;i<cnt;i++)petals.push(ambient(true));startPetals();
   document.addEventListener('visibilitychange',function(){if(document.hidden){cancelAnimationFrame(raf);running=false}else startPetals()})}
 
-/* ---------- background music ---------- */
-var music=$('#musicAudio'),fab=$('#musicFab'),mMissing=false,mLbl=$('#musicLbl');
-music.volume=.4;
-music.addEventListener('error',function(){mMissing=true});
-function syncMusic(){var on=!music.paused;fab.setAttribute('aria-pressed',on?'true':'false');fab.setAttribute('aria-label',on?'Pause background music':'Play soft background music');mLbl.textContent=on?'Music on':'Music'}
-function pauseMusic(){if(!music.paused){music.pause()}syncMusic()}
-music.addEventListener('play',syncMusic);music.addEventListener('pause',syncMusic);
-fab.addEventListener('click',function(){
-  if(mMissing||music.error){toast("The background music hasn't been added yet.");return}
-  if(music.paused){var pr=music.play();if(pr&&pr.catch)pr.catch(function(){toast("The music couldn't start. Please try again.")})}else music.pause()});
-
 /* ---------- opening ---------- */
 var opening=$('#opening'),journey=$('#journey'),openBtn=$('#openBtn'),env=$('#env'),opened=false;
 function showJourney(){
   opening.hidden=true;
   journey.hidden=false;
   journey.classList.add('entering');
-  fab.hidden=false;
   window.scrollTo(0,0);
 }
 openBtn.addEventListener('click',function(){
   if(opened)return;opened=true;
-  // Trigger music play on the initial user interaction
-  if(!mMissing && !music.error) {
-    var pr = music.play();
-    if(pr && pr.catch) pr.catch(function(){}); // fail silently if browser blocks autoplay
-  }
-  
   if(reduce){showJourney();return}
   openBtn.classList.add('pressed');env.classList.add('open');
   setTimeout(function(){opening.classList.add('leaving')},1100);
@@ -559,61 +468,27 @@ $$('input[data-photo]').forEach(function(inp){inp.addEventListener('change',func
   $('img',ph).src=URL.createObjectURL(f);toast('Preview only. To publish this photo, add it to the images folder.')})});
 (function(){var im=$('#flowersPng');if(!im)return;im.addEventListener('load',function(){im.hidden=false});im.addEventListener('error',function(){im.hidden=true})})();
 
-/* ---------- voice player ---------- */
-var voice=$('#voiceAudio'),player=$('#player'),playBtn=$('#playBtn'),seek=$('#seek'),tCur=$('#tCur'),tDur=$('#tDur'),vMsg=$('#voiceMsg'),waveEl=$('#wave'),replayBtn=$('#replay');
-var N=44,bars=[],vMissing=false,vRaf=0;
-for(var b=0;b<N;b++){var el=document.createElement('i');el.style.setProperty('--k',b);el.style.setProperty('--h',(.26+.74*Math.abs(Math.sin(b*1.7)*Math.cos(b*.53))).toFixed(3));waveEl.appendChild(el);bars.push(el)}
-function fmt(s){if(!isFinite(s)||s<0)s=0;return Math.floor(s/60)+':'+('0'+Math.floor(s%60)).slice(-2)}
-function mark(f){var on=Math.round(f*N);for(var i=0;i<N;i++)bars[i].classList.toggle('on',i<on)}
-function upd(){var d=voice.duration,c=voice.currentTime,f=d?c/d:0;seek.value=Math.round(f*1000);tCur.textContent=fmt(c);mark(f)}
-function loop(){upd();vRaf=requestAnimationFrame(loop)}
-function setMissing(on){vMissing=on;vMsg.hidden=!on;[playBtn,replayBtn,seek].forEach(function(e){e.disabled=on;e.style.opacity=on?.5:''})}
-voice.addEventListener('loadedmetadata',function(){setMissing(false);tDur.textContent=fmt(voice.duration);upd();realWave(voice.currentSrc||voice.src)});
-voice.addEventListener('durationchange',function(){tDur.textContent=fmt(voice.duration)});
-voice.addEventListener('error',function(){setMissing(true)});
-voice.addEventListener('play',function(){player.classList.add('playing');playBtn.setAttribute('aria-label','Pause voice message');pauseMusic();cancelAnimationFrame(vRaf);loop()});
-voice.addEventListener('pause',function(){player.classList.remove('playing');playBtn.setAttribute('aria-label','Play voice message');cancelAnimationFrame(vRaf);upd()});
-voice.addEventListener('ended',function(){player.classList.remove('playing');cancelAnimationFrame(vRaf);playBtn.setAttribute('aria-label','Play voice message');upd()});
-playBtn.addEventListener('click',function(){if(vMissing)return;if(voice.paused){var pr=voice.play();if(pr&&pr.catch)pr.catch(function(){vMsg.textContent="The voice message couldn't start. Please try once more.";vMsg.hidden=false})}else voice.pause()});
-replayBtn.addEventListener('click',function(){if(vMissing)return;voice.currentTime=0;var pr=voice.play();if(pr&&pr.catch)pr.catch(function(){})});
-seek.addEventListener('input',function(){if(voice.duration){voice.currentTime=voice.duration*seek.value/1000;upd()}});
-setTimeout(function(){if(voice.error||voice.networkState===3)setMissing(true)},1500);
-function realWave(src){
-  try{var Off=window.OfflineAudioContext||window.webkitOfflineAudioContext;if(!Off||!window.fetch)return;
-    fetch(src).then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}).then(function(buf){
-      var ctx=new Off(1,1,44100);return new Promise(function(res,rej){var p=ctx.decodeAudioData(buf,res,rej);if(p&&p.then)p.then(res,rej)})
-    }).then(function(a){var d=a.getChannelData(0),step=Math.floor(d.length/N),pk=[],mx=0;if(!step)return;
-      for(var i=0;i<N;i++){var m=0,inc=Math.max(1,Math.floor(step/300));for(var j=i*step;j<(i+1)*step;j+=inc){var v=Math.abs(d[j]);if(v>m)m=v}pk.push(m);if(m>mx)mx=m}
-      if(!mx)return;pk.forEach(function(v,i){bars[i].style.setProperty('--h',(.16+.84*Math.pow(v/mx,.7)).toFixed(3))})
-    }).catch(function(){})}catch(e){}}
-
 /* ---------- forgiveness ---------- */
 var yes=$('#yesBtn'),later=$('#timeBtn'),reply=$('#reply');
-// Only the 'yes' message is needed now
 var MSG={yes:"Thank you for taking a moment to hear me out. I'll do my best to value this friendship."};
 
 function choose(k,btn,other){
   btn.setAttribute('aria-pressed','true');
-  other.style.display = 'none'; // hide the dodge button when she finally says yes
+  other.style.display = 'none';
   reply.classList.remove('show');void reply.offsetWidth;reply.textContent=MSG[k];reply.classList.add('show');
   if(k==='yes'&&!reduce){var r=btn.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2);startPetals()}
 }
 
-// "Let's Be Friends Again" works normally
 yes.addEventListener('click',function(){choose('yes',yes,later)});
 
-// Prank: Make the "I Need Some Time" button dodge and run away!
 later.style.position = 'relative';
 later.style.zIndex = '5';
-later.style.transition = 'transform 0.25s ease-out'; // smooth runaway jump
+later.style.transition = 'transform 0.25s ease-out';
 
 function runAway(e) {
   if (e && e.preventDefault) e.preventDefault();
-  
-  // Calculate a random distance to jump (between -120px and +120px on both axis)
   var rx = (Math.random() - 0.5) * 240;
   var ry = (Math.random() - 0.5) * 160;
-  
   later.style.transform = 'translate(' + rx + 'px, ' + ry + 'px)';
 }
 
@@ -621,14 +496,10 @@ later.addEventListener('mouseenter', runAway);
 later.addEventListener('touchstart', runAway, {passive: false});
 later.addEventListener('click', runAway);
 
-
 /* ---------- setup mode (#setup) ---------- */
 function applySetup(){var on=location.hash==='#setup';document.documentElement.toggleAttribute('data-setup',on);$('#setup').hidden=!on}
 window.addEventListener('hashchange',applySetup);applySetup();
-$('#skipOpen').addEventListener('click',function(){if(!opened){opened=true;showJourney()}else window.scrollTo(0,0);$('#voice').scrollIntoView()});
-function localAudio(inp,el,after){inp.addEventListener('change',function(){var f=inp.files&&inp.files[0];if(!f)return;el.src=URL.createObjectURL(f);el.load();if(after)after();toast('Loaded for preview on this device only.')})}
-localAudio($('#prevVoice'),voice,function(){setMissing(false)});
-localAudio($('#prevMusic'),music,function(){mMissing=false});
+$('#skipOpen').addEventListener('click',function(){if(!opened){opened=true;showJourney()}else window.scrollTo(0,0);$('#apology').scrollIntoView()});
 
 /* ---------- QR code + printable card ---------- */
 var qrIn=$('#qrUrl'),qrMake=$('#qrMake'),qrStatus=$('#qrStatus'),cardPrev=$('#cardPrev'),dlCard=$('#dlCard'),dlQr=$('#dlQr');
