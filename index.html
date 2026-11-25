@@ -5,9 +5,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=Share+Tech+Mono&display=swap">
 <style>
-/* Layout: one scrapbook, one soft pastel page per message, a single column of
-   about 640px. The letter is the first thing and the night sky the last.
-   Single committed look (pastel paper world), so no dark theme blocks. */
 :root{
   --cream:#fff8f1; --paper:#fffdf9; --blush:#fbd3df; --rose:#d9718f; --peach:#ffd8bd;
   --lilac:#dcd0f3; --iris:#6f5aae; --sky:#cfe5f6; --gold:#c8a24e;
@@ -125,18 +122,6 @@ html[data-setup] .setup-only{display:block}
 .duo{width:min(100%,380px);height:auto;overflow:visible}
 .wish .copy{display:flex;flex-direction:column;gap:1em;max-width:34ch;font-family:var(--serif);font-size:1.15rem;line-height:1.7;text-wrap:pretty}
 
-/* night */
-.night{position:relative;overflow:hidden;color:#fbf7ff;padding-block:240px 120px;
-  background:linear-gradient(180deg,#e9f3fb 0,#b8b9ea 6%,#7a77c4 18%,#4a4f9e 40%,#25306e 100%)}
-.night .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:30px;text-align:center}
-.night p{text-wrap:pretty}
-.stars span{position:absolute;border-radius:50%;background:#fff;box-shadow:0 0 6px 1px rgba(255,255,255,.9);animation:twinkle var(--t,4s) ease-in-out var(--dl,0s) infinite}
-.moon{position:absolute;top:150px;right:max(7%,16px);width:78px;height:78px;border-radius:50%;z-index:1;
-  background:radial-gradient(circle at 35% 35%,#fffbe6,#ffeebd 60%,#f0d48c);box-shadow:0 0 40px 14px rgba(255,238,189,.55),0 0 120px 40px rgba(255,238,189,.25)}
-.night-fl{position:absolute;z-index:1;opacity:.9;animation:floaty 9s ease-in-out var(--dl,0s) infinite}
-.night .central{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:#e7defa;max-width:30ch}
-.final{font-family:var(--hand);font-size:clamp(1.9rem,7.4vw,2.6rem);font-weight:700;line-height:1.2;color:#fff;text-shadow:0 0 22px rgba(255,200,230,.55)}
-
 /* toast */
 #toast{position:fixed;z-index:30;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);max-width:min(88vw,380px);background:#3f3047;color:#fff;font:500 .92rem/1.4 var(--sans);padding:12px 16px;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;text-align:center}
 #toast.show{opacity:1;transform:translate(-50%,0)}
@@ -162,7 +147,6 @@ html[data-setup] .setup-only{display:block}
 @keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
 @keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
 @keyframes press{0%{transform:scale(1)}40%{transform:scale(.93)}100%{transform:scale(1.04)}}
-@keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-22px) rotate(5deg)}}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 #journey.entering{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
 
@@ -357,28 +341,6 @@ html[data-setup] .setup-only{display:block}
         </div>
       </div>
     </section>
-
-    <!-- 7. Night -->
-    <section class="night" id="night" aria-labelledby="nH">
-      <div class="stars" id="stars" aria-hidden="true"></div>
-      <div class="moon" aria-hidden="true"></div>
-      <span class="fl night-fl" data-k="blossom" style="--s:46px;left:7%;top:42%;--dl:0s" aria-hidden="true"></span>
-      <span class="fl night-fl" data-k="daisy" style="--s:54px;right:6%;top:60%;--dl:-3s" aria-hidden="true"></span>
-      <span class="fl night-fl" data-k="white" style="--s:40px;left:12%;top:78%;--dl:-5s" aria-hidden="true"></span>
-      <span class="fl night-fl" data-k="blossom" style="--s:38px;right:14%;top:30%;--dl:-7s" aria-hidden="true"></span>
-      <div class="wrap">
-        <h2 id="nH" class="rev">If You Feel Like Talking...</h2>
-        <div class="rev" style="display:flex;flex-direction:column;gap:1em;max-width:32ch;font-family:var(--serif);font-size:1.15rem;line-height:1.7">
-          <p>If there's anything you want to say, I'll be here to listen.</p>
-        </div>
-        <div class="rev" style="display:flex;flex-direction:column;gap:1em;max-width:32ch;font-family:var(--serif);font-size:1.1rem;line-height:1.7">
-          <p>Whatever happens, I genuinely wish you happiness, peace, and countless reasons to smile.</p>
-          <p>Thank you for being a part of my journey.</p>
-        </div>
-        <p class="central rev">Your friendship matters. I'm genuinely sorry. I respect your feelings, and I wish you happiness.</p>
-        <p class="final rev">A genuine sorry from one friend to another. 🌸</p>
-      </div>
-    </section>
   </div>
 </main>
 
@@ -417,9 +379,9 @@ if('IntersectionObserver' in window){
 }else{targets.forEach(function(t){t.classList.add('in')})}
 setTimeout(function(){$$('.opening .fl').forEach(function(f){f.classList.add('in')})},reduce?0:250);
 
-/* ---------- sparkles + stars ---------- */
+/* ---------- sparkles ---------- */
 function dots(host,n,minS,maxS){var h=$(host),f=document.createDocumentFragment();for(var i=0;i<n;i++){var s=document.createElement('span'),z=rnd(minS,maxS);s.style.cssText='left:'+rnd(0,100)+'%;top:'+rnd(0,100)+'%;width:'+z+'px;height:'+z+'px;--t:'+rnd(2.4,5.5)+'s;--dl:'+rnd(-5,0)+'s';f.appendChild(s)}h.appendChild(f)}
-dots('#sparkles',26,2,5.5);dots('#stars',80,1.5,3.8);
+dots('#sparkles',26,2,5.5);
 
 /* ---------- petal canvas ---------- */
 var cv=$('#petals'),cx=cv.getContext('2d'),W=0,H=0,DPR=1,petals=[];
