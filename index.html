@@ -1,151 +1,203 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>A Little Friendship Letter</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#0a0c16;color:#f5f2f8}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>A Little Friendship Letter — 君へ</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=Noto+Serif+JP:wght@400;500&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Noto+Serif+JP:wght@500;700&family=Share+Tech+Mono&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
 <style>
+/* Yuji Itadori / Jujutsu Kaisen Aesthetic:
+   Jujutsu High obsidian navy, hoodie crimson, coral-pink accents,
+   Divergent Fist cyan cursed-energy glow, and Black Flash crimson sparks. */
 :root{
-  --cream:#fff8f1; --paper:#fffdf9; --blush:#fbd3df; --rose:#d9718f; --peach:#ffd8bd;
-  --lilac:#dcd0f3; --iris:#6f5aae; --sky:#cfe5f6; --gold:#c8a24e;
-  --ink:#3f3047; --ink-soft:#675870; --leaf:#7fb28b;
-  --serif:'Fraunces',Georgia,'Times New Roman',serif;
-  --hand:'Caveat','Segoe Script','Bradley Hand',cursive;
-  --sans:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --navy:#0a0c16; --navy-2:#141829; --navy-3:#1c2138;
+  --crimson:#e62e45; --crimson-deep:#9e182b; --coral:#ff7a90;
+  --cyan:#00e5ff; --gold:#e5c158;
+  --ink:#f5f2f8; --ink-soft:#b4b8cf; --card-ink:#241c2c;
+  --serif:'Noto Serif JP',Georgia,serif;
+  --hand:'Caveat','Segoe Script',cursive;
+  --sans:'Zen Maru Gothic',system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:'Share Tech Mono',ui-monospace,Menlo,monospace;
-  color-scheme:light;
+  color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);overflow-x:hidden;-webkit-text-size-adjust:100%}
-h1,h2{font-family:var(--serif);font-weight:500;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
-h2{font-size:clamp(1.9rem,6.6vw,2.7rem)}
+body{background:var(--navy);color:var(--ink);font:400 1.05rem/1.65 var(--sans);overflow-x:hidden;-webkit-text-size-adjust:100%}
+h1,h2{font-family:var(--serif);font-weight:700;line-height:1.18;margin:0;text-wrap:balance;letter-spacing:.03em}
+h2{font-size:clamp(1.75rem,6vw,2.5rem)}
 p{margin:0}
 button{font-family:inherit}
-.wrap{width:100%;max-width:640px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.wrap.wide{max-width:1000px}
-.page{padding-block:clamp(64px,12vw,112px)}
-.page .wrap{display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
-.lede{max-width:34ch;font-size:1.125rem;color:var(--ink-soft);text-wrap:pretty}
-.hand{font-family:var(--hand);font-size:clamp(1.55rem,5.4vw,1.95rem);line-height:1.25;color:var(--ink);text-wrap:balance}
-:focus-visible{outline:3px solid var(--iris);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:660px;margin-inline:auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.wrap.wide{max-width:1020px}
+.page{position:relative;padding-block:clamp(72px,13vw,120px);overflow:hidden}
+.page .wrap{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
+.lede{max-width:34ch;font-size:1.06rem;color:var(--ink-soft);text-wrap:pretty}
+.hand{font-family:var(--hand);font-size:clamp(1.55rem,5.4vw,1.95rem);line-height:1.25;text-wrap:balance}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:10px}
 
-/* canvas petals */
+/* canvas cursed energy embers + coral sakura */
 #petals{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:15}
 
+/* vertical Japanese anime poster tags */
+.v-tag{position:absolute;z-index:2;writing-mode:vertical-rl;font-family:var(--serif);font-size:.82rem;letter-spacing:.38em;color:rgba(255,122,144,.32);pointer-events:none;user-select:none}
+.v-tag.left{left:max(10px,2.2vw);top:16%}
+.v-tag.right{right:max(10px,2.2vw);bottom:16%}
+
+/* JJK chapter badge */
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font:700 .78rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#fff;
+  background:rgba(230,46,69,.18);border:1px solid rgba(255,122,144,.45);
+  box-shadow:0 0 18px rgba(230,46,69,.28);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
 /* buttons */
-.btn{font:700 1rem/1.2 var(--sans);min-height:50px;padding:.9rem 1.6rem;border-radius:999px;border:2px solid transparent;cursor:pointer;color:#3a2a40;transition:transform .25s,box-shadow .25s,background .25s}
-.btn.primary{background:linear-gradient(135deg,#f6a6bf,#ffcaa9);box-shadow:0 12px 26px -12px rgba(217,113,143,.85)}
-.btn.primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(217,113,143,.9)}
-.btn.ghost{background:rgba(255,255,255,.72);border-color:var(--lilac);color:#4a3b78}
-.btn.ghost:hover{background:#fff;transform:translateY(-2px)}
-.btn[aria-pressed="true"]{outline:3px solid var(--iris);outline-offset:3px}
-.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.btn{font:700 1rem/1.2 var(--sans);min-height:52px;padding:.92rem 1.85rem;border-radius:999px;border:2px solid rgba(255,122,144,.6);cursor:pointer;color:#fff;transition:transform .25s,box-shadow .25s,background .25s}
+.btn.primary{background:linear-gradient(135deg,#e62e45,#ff6b85);box-shadow:0 0 24px rgba(230,46,69,.55),0 0 40px rgba(0,229,255,.18)}
+.btn.primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 0 32px rgba(230,46,69,.8),0 0 26px rgba(0,229,255,.45)}
+.btn.ghost{background:rgba(20,24,41,.85);border-color:rgba(0,229,255,.5);color:#e6fbff}
+.btn.ghost:hover{background:#1c2440;transform:translateY(-2px)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
 .btn.pressed{animation:press .6s ease both}
 
 /* reveal */
-.rev{transition:opacity .9s ease calc(var(--i,0)*.28s),transform .9s cubic-bezier(.2,.8,.2,1) calc(var(--i,0)*.28s)}
-.js .rev:not(.in){opacity:0;transform:translateY(20px)}
+.rev{transition:opacity .95s ease calc(var(--i,0)*.24s),transform .95s cubic-bezier(.2,.8,.2,1) calc(var(--i,0)*.24s)}
+.js .rev:not(.in){opacity:0;transform:translateY(22px)}
 
-/* flowers */
-.fl{display:inline-block;width:var(--s,90px);line-height:0}
-.fl svg{width:100%;height:auto;overflow:visible;transform-origin:50% 100%}
-.fl .stem{stroke-dasharray:130;transition:stroke-dashoffset 1.2s ease var(--d,0s)}
-.fl .leaf{transition:opacity 1s ease calc(var(--d,0s) + .7s)}
-.fl .head{transform-box:fill-box;transform-origin:center;transition:transform 1.9s cubic-bezier(.2,.9,.25,1.12) calc(var(--d,0s) + .55s)}
-.js .fl:not(.in) .head{transform:scale(0) rotate(-50deg)}
-.js .fl:not(.in) .stem{stroke-dashoffset:130}
-.js .fl:not(.in) .leaf{opacity:0}
-.fl.in svg{animation:sway 7s ease-in-out calc(var(--d,0s) * -4) infinite}
+/* subtle manga halftone overlay */
+.halftone{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.14;
+  background-image:radial-gradient(rgba(255,122,144,.55) 1px,transparent 1px);
+  background-size:18px 18px;mask-image:linear-gradient(180deg,transparent,rgba(0,0,0,.8) 50%,transparent)}
 
-/* opening */
-.opening{position:relative;min-height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));display:flex;align-items:center;overflow:hidden;
-  background:radial-gradient(60% 38% at 18% 8%,#ffd8bd 0,transparent 70%),radial-gradient(50% 38% at 88% 18%,#dcd0f3 0,transparent 70%),radial-gradient(70% 45% at 50% 100%,#cfe5f6 0,transparent 72%),#fff3ee;
-  transition:opacity .9s ease,transform .9s ease,filter .9s ease}
-.opening.leaving{opacity:0;transform:scale(1.06);filter:blur(10px)}
-.opening .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;padding-block:32px}
-.opening h1{font-size:clamp(2.5rem,11vw,4.1rem);font-style:italic;font-weight:400}
-.open-flowers{display:flex;align-items:flex-end;justify-content:center;gap:2px;margin-bottom:4px}
-.sparkles span{position:absolute;border-radius:50%;background:#fff;box-shadow:0 0 8px 2px rgba(255,236,190,.95);animation:twinkle var(--t,3s) ease-in-out var(--dl,0s) infinite}
-.env{position:relative;width:min(210px,56vw);aspect-ratio:1.5;margin:6px 0 4px;perspective:700px}
+/* sparkles & cursed energy flashes */
+.sparkles span{position:absolute;border-radius:50%;background:#fff;box-shadow:0 0 10px 2px var(--c,rgba(0,229,255,.85));animation:twinkle var(--t,3s) ease-in-out var(--dl,0s) infinite}
+.slash{position:absolute;width:160px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--crimson),transparent);border-radius:999px;opacity:0;transform:rotate(-26deg);pointer-events:none;z-index:1;filter:drop-shadow(0 0 8px var(--crimson));animation:shoot 6.5s ease-in-out var(--dl,0s) infinite}
+
+/* 1. Opening — Yuji Itadori Cursed Energy Twilight */
+.opening{position:relative;min-height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));display:flex;align-items:center;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(50% 42% at 50% 82%,rgba(230,46,69,.36),transparent 70%),
+    radial-gradient(45% 38% at 18% 22%,rgba(0,229,255,.18),transparent 70%),
+    radial-gradient(45% 38% at 85% 28%,rgba(255,122,144,.22),transparent 70%),
+    linear-gradient(180deg,#080912 0%,#121629 48%,#1d1326 82%,#2a1426 100%);
+  transition:opacity .95s ease,transform .95s ease,filter .95s ease}
+.opening.leaving{opacity:0;transform:scale(1.07);filter:blur(12px)}
+.opening .wrap{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;padding-block:36px}
+.opening h1{font-size:clamp(2.4rem,10.5vw,4rem);color:#fff;text-shadow:0 0 26px rgba(255,122,144,.55),0 4px 14px rgba(0,0,0,.6)}
+.opening .hand{color:#ffd6df;text-shadow:0 2px 14px rgba(0,0,0,.55)}
+
+/* Jujutsu High Uniform Envelope (Navy + Crimson Hoodie Flap + Gold Swirl Button Seal) */
+.env{position:relative;width:min(220px,58vw);aspect-ratio:1.5;margin:10px 0 8px;perspective:700px;
+  filter:drop-shadow(0 16px 30px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(0,229,255,.22))}
 .env>*{position:absolute}
-.env .back{inset:0;border-radius:12px;background:linear-gradient(160deg,#fbc4d4,#ffd2b3);box-shadow:0 18px 30px -18px rgba(150,80,110,.55)}
-.env .paper{left:9%;right:9%;top:10%;bottom:14%;background:var(--paper);border-radius:6px;display:grid;place-items:center;z-index:1;font:700 1.5rem var(--hand);color:var(--rose);box-shadow:0 2px 8px rgba(0,0,0,.08);transition:transform .9s cubic-bezier(.2,.8,.2,1) .35s}
-.env .front{inset:0;border-radius:12px;z-index:2;background:linear-gradient(200deg,#ffd6bb,#f8b9cd);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
-.env .flap{left:0;right:0;top:0;height:58%;z-index:3;background:linear-gradient(#f4a9c1,#f9c6d4);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s ease}
+.env .back{inset:0;border-radius:14px;background:linear-gradient(160deg,#161b33,#0e1122);border:1.5px solid rgba(255,122,144,.45)}
+.env .paper{left:9%;right:9%;top:10%;bottom:14%;background:linear-gradient(180deg,#fff7f9,#ffe4ec);border-radius:8px;display:grid;place-items:center;z-index:1;font:700 1.35rem var(--serif);color:var(--crimson-deep);box-shadow:0 2px 12px rgba(0,0,0,.25);transition:transform .9s cubic-bezier(.2,.8,.2,1) .35s}
+.env .front{inset:0;border-radius:14px;z-index:2;background:linear-gradient(200deg,#1d2340,#111528);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
+.env .flap{left:0;right:0;top:0;height:58%;z-index:3;background:linear-gradient(180deg,#d92638,#a81829);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s ease}
+.env .seal{left:50%;top:48%;width:34px;height:34px;transform:translate(-50%,-50%);z-index:4;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#fff0a6,#d4a437 70%,#8c6818);
+  border:2px solid #fff3c4;display:grid;place-items:center;
+  box-shadow:0 0 16px rgba(229,193,88,.65),0 4px 10px rgba(0,0,0,.5);
+  transition:opacity .4s,transform .4s}
+.env .seal svg{width:20px;height:20px;fill:none;stroke:#473108;stroke-width:2.2;stroke-linecap:round}
+.env.open .seal{opacity:0;transform:translate(-50%,-50%) scale(1.45)}
 .env.open .flap{transform:rotateX(180deg);z-index:0}
-.env.open .paper{transform:translateY(-34%)}
+.env.open .paper{transform:translateY(-38%)}
 
-/* apology */
-.apology{background:linear-gradient(180deg,#fff3ee,#fde8ee)}
-.letter{position:relative;width:100%;text-align:left;background:var(--paper);border-radius:22px;padding:clamp(30px,7vw,48px) clamp(22px,6vw,42px) clamp(28px,6vw,40px) clamp(40px,9vw,64px);display:flex;flex-direction:column;gap:1.25em;box-shadow:0 30px 50px -30px rgba(160,90,120,.5),0 2px 0 rgba(255,255,255,.9) inset;
-  background-image:linear-gradient(90deg,transparent clamp(30px,7.5vw,50px),rgba(229,138,166,.4) clamp(30px,7.5vw,50px),rgba(229,138,166,.4) calc(clamp(30px,7.5vw,50px) + 1.5px),transparent calc(clamp(30px,7.5vw,50px) + 1.5px))}
-.letter::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,222,160,.75);border-radius:3px}
-.letter p{font-family:var(--serif);font-size:clamp(1.06rem,3.9vw,1.2rem);line-height:1.8;font-weight:400;text-wrap:pretty}
+/* 2. Apology — Dark Jujutsu Dialogue / Episode Card */
+.apology{background:
+  radial-gradient(55% 40% at 88% 18%,rgba(230,46,69,.22),transparent 70%),
+  radial-gradient(50% 40% at 10% 82%,rgba(0,229,255,.14),transparent 70%),
+  linear-gradient(180deg,#141326 0%,#111426 55%,#0e1120 100%)}
+.apology h2{color:#fff;text-shadow:0 0 22px rgba(255,122,144,.45)}
+.letter{position:relative;width:100%;text-align:left;
+  background:linear-gradient(165deg,rgba(24,28,48,.92),rgba(16,18,34,.96));
+  border-radius:20px;border:1.5px solid rgba(255,122,144,.38);
+  border-left:5px solid var(--crimson);
+  padding:clamp(30px,7vw,48px) clamp(24px,6vw,42px);
+  display:flex;flex-direction:column;gap:1.15em;
+  box-shadow:0 28px 60px -20px rgba(0,0,0,.75),0 0 32px rgba(230,46,69,.16),inset 0 1px 0 rgba(255,255,255,.08);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.vn-plate{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:-6px;padding:6px 14px;border-radius:6px;
+  background:linear-gradient(135deg,var(--crimson),#ff5e78);color:#fff;
+  font:700 .8rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;
+  box-shadow:0 6px 18px -6px rgba(230,46,69,.8)}
+.letter p{font-family:var(--serif);font-size:clamp(1.05rem,3.8vw,1.18rem);line-height:1.9;font-weight:500;color:#f7f4fa;text-wrap:pretty}
 
-/* gallery */
-.gallery{background:linear-gradient(180deg,#fde8ee,#efe9fb);padding-bottom:clamp(96px,16vw,140px)}
-.polas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:40px 26px;justify-items:center;width:100%;padding-top:10px}
+/* 3. Memories — Cursed Energy Gallery + JJK End Card */
+.gallery{color:#fff;padding-bottom:clamp(110px,18vw,160px);
+  background:
+    radial-gradient(50% 30% at 18% 25%,rgba(0,229,255,.14),transparent 70%),
+    radial-gradient(55% 32% at 84% 72%,rgba(230,46,69,.22),transparent 70%),
+    linear-gradient(180deg,#0e1120 0%,#121428 45%,#0c0c18 80%,#07070f 100%)}
+.gallery h2{color:#fff;text-shadow:0 0 22px rgba(0,229,255,.35),0 0 32px rgba(230,46,69,.35)}
+.polas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:44px 28px;justify-items:center;width:100%;padding-top:16px}
 .pw{width:min(100%,300px);margin:0}
 .js .pw.rev:not(.in){transform:translateY(-26px) rotate(calc(var(--r)*-2));opacity:0}
-.polaroid{position:relative;background:#fff;padding:12px 12px 14px;border-radius:5px;transform:rotate(var(--r));box-shadow:0 22px 34px -18px rgba(90,60,110,.5),0 2px 4px rgba(90,60,110,.12);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
-.polaroid:hover{transform:rotate(0) translateY(-6px) scale(1.02);box-shadow:0 30px 40px -18px rgba(90,60,110,.55)}
-.polaroid::before{content:"";position:absolute;top:-13px;left:50%;width:84px;height:26px;transform:translateX(-50%) rotate(calc(var(--r)*-1.5));background:rgba(255,222,160,.8);border-radius:3px;z-index:2}
-.photo{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:2px;background:linear-gradient(160deg,#fde0ea,#e7dcf8 60%,#d6ebfa)}
+.polaroid{position:relative;background:#fbf9fc;padding:12px 12px 16px;border-radius:8px;border:1.5px solid rgba(255,255,255,.9);transform:rotate(var(--r));
+  box-shadow:0 24px 44px -16px rgba(0,0,0,.8),0 0 22px rgba(230,46,69,.22);
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.polaroid:hover{transform:rotate(0) translateY(-8px) scale(1.03);
+  box-shadow:0 30px 50px -16px rgba(0,0,0,.85),0 0 28px rgba(0,229,255,.45),0 0 42px rgba(230,46,69,.35)}
+/* Yuji hoodie crimson tape */
+.polaroid::before{content:"";position:absolute;top:-13px;left:50%;width:86px;height:24px;transform:translateX(-50%) rotate(calc(var(--r)*-1.5));
+  background:linear-gradient(90deg,rgba(230,46,69,.88),rgba(255,107,133,.88));border-radius:3px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.photo{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:linear-gradient(160deg,#1c2138,#2e1828 60%,#121629)}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 .photo.miss img{display:none}
-.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink-soft)}
-.ph .fl{--s:96px}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#ffd6df}
 .ph small{font:500 .8rem var(--sans);padding:0 14px;text-align:center}
-.polaroid figcaption{font-family:var(--hand);font-size:1.5rem;line-height:1.15;padding:14px 6px 2px;color:var(--ink);text-wrap:balance}
+.polaroid figcaption{font-family:var(--hand);font-size:1.5rem;line-height:1.15;padding:14px 6px 2px;color:var(--card-ink);text-wrap:balance}
 .setup-only{display:none}
 html[data-setup] .setup-only{display:block}
 
-/* closing Japanese line */
-.jp-close{margin-top:36px;padding-top:28px;border-top:1.5px dashed rgba(111,90,174,.25);width:min(100%,320px);display:flex;flex-direction:column;align-items:center;gap:6px}
-.jp-close .jp{font-family:'Noto Serif JP',var(--serif);font-size:clamp(1.6rem,6vw,2.1rem);font-weight:500;color:var(--ink);letter-spacing:.04em}
-.jp-close .romaji{font-family:var(--hand);font-size:clamp(1.45rem,5vw,1.8rem);color:var(--rose)}
+/* Cinematic JJK End-Card: 君が好き。🌸 */
+.jp-close{position:relative;margin-top:56px;padding:36px 28px 32px;width:min(100%,430px);border-radius:22px;
+  background:linear-gradient(160deg,rgba(24,20,38,.88),rgba(14,16,32,.92));
+  border:1.5px solid rgba(255,122,144,.45);
+  box-shadow:0 24px 60px -18px rgba(0,0,0,.85),0 0 36px rgba(230,46,69,.28),0 0 18px rgba(0,229,255,.18);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  display:flex;flex-direction:column;align-items:center;gap:8px}
+.jp-close .jp{font-family:var(--serif);font-size:clamp(2rem,8vw,2.75rem);font-weight:700;color:#fff;letter-spacing:.12em;
+  text-shadow:0 0 22px rgba(255,122,144,.85),0 0 42px rgba(230,46,69,.55)}
+.jp-close .romaji{font-family:var(--hand);font-size:clamp(1.6rem,5.4vw,2rem);color:var(--coral);letter-spacing:.04em}
+.jp-close .sub-line{margin-top:8px;width:84px;height:2px;border-radius:999px;background:linear-gradient(90deg,transparent,var(--cyan),var(--crimson),transparent)}
 
 /* music button + toast */
-#musicFab{position:fixed;z-index:20;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:9px;min-height:48px;padding:0 18px 0 14px;border-radius:999px;border:2px solid rgba(255,255,255,.9);background:rgba(255,250,246,.92);color:#4a3b78;font:700 .92rem var(--sans);cursor:pointer;box-shadow:0 12px 26px -10px rgba(90,60,130,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+#musicFab{position:fixed;z-index:20;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:9px;min-height:48px;padding:0 18px 0 14px;border-radius:999px;border:1.5px solid rgba(255,122,144,.7);background:rgba(16,18,34,.85);color:#fff;font:700 .9rem var(--sans);cursor:pointer;box-shadow:0 12px 26px -10px rgba(0,0,0,.75),0 0 18px rgba(230,46,69,.3);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 #musicFab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 #musicFab .eq{display:none;gap:2px;align-items:flex-end;height:16px}
-#musicFab .eq i{width:3px;background:var(--rose);border-radius:2px;animation:eq .8s ease-in-out infinite}
-#musicFab .eq i:nth-child(2){animation-delay:-.3s}#musicFab .eq i:nth-child(3){animation-delay:-.6s}
+#musicFab .eq i{width:3px;background:var(--cyan);border-radius:2px;animation:eq .8s ease-in-out infinite}
+#musicFab .eq i:nth-child(2){background:var(--crimson);animation-delay:-.3s}#musicFab .eq i:nth-child(3){background:var(--coral);animation-delay:-.6s}
 #musicFab[aria-pressed="true"] .eq{display:flex}
 #musicFab[aria-pressed="true"] .note-ic{display:none}
-#toast{position:fixed;z-index:30;left:50%;bottom:calc(76px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);max-width:min(88vw,380px);background:#3f3047;color:#fff;font:500 .92rem/1.4 var(--sans);padding:12px 16px;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;text-align:center}
+#toast{position:fixed;z-index:30;left:50%;bottom:calc(76px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);max-width:min(88vw,380px);background:#1b1e34;color:#fff;border:1px solid rgba(255,122,144,.5);font:500 .92rem/1.4 var(--sans);padding:12px 16px;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;text-align:center}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 
 /* setup (owner only) */
-.setup{background:#fff;border-bottom:3px dashed var(--lilac);padding-block:28px 36px;color:var(--ink)}
+.setup{background:#121526;border-bottom:3px dashed var(--crimson);padding-block:28px 36px;color:#f5f2f8}
 .setup .wrap{display:flex;flex-direction:column;gap:18px;max-width:720px}
 .setup h2{font-size:1.5rem}
 .setup h3{font:700 1rem var(--sans);margin:0 0 6px}
-.setup code{font:500 .86rem var(--mono);background:#f3ecfb;padding:2px 6px;border-radius:6px;word-break:break-all}
+.setup code{font:500 .86rem var(--mono);background:#1f2440;color:#ffd6df;padding:2px 6px;border-radius:6px;word-break:break-all}
 .setup ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px;font-size:.95rem}
-.setup .box{border:1px solid #e6dcf5;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.setup .box{border:1px solid rgba(255,122,144,.3);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;background:#171b30}
 .setup label{font-size:.92rem;font-weight:500;display:flex;flex-direction:column;gap:4px}
-.setup input[type=url],.setup input[type=file]{font:400 1rem var(--sans);padding:10px 12px;border:1.5px solid #cfc2ea;border-radius:12px;width:100%;min-width:0;background:#fff;color:var(--ink)}
+.setup input[type=url],.setup input[type=file]{font:400 1rem var(--sans);padding:10px 12px;border:1.5px solid rgba(0,229,255,.4);border-radius:12px;width:100%;min-width:0;background:#0e1120;color:#fff}
 .setup .row{display:flex;flex-wrap:wrap;gap:10px}
 .setup .row .btn{min-height:44px;padding:.7rem 1.1rem}
 .status{font-size:.92rem;color:var(--ink-soft)}
-.status.bad{color:#a2304f}
-.qr-preview{max-width:min(100%,340px);height:auto;border-radius:12px;box-shadow:0 12px 30px -14px rgba(60,40,90,.5);align-self:center}
-.upl{font-size:.82rem;color:var(--iris);margin-top:8px}
+.status.bad{color:#ff6b85}
+.qr-preview{max-width:min(100%,340px);height:auto;border-radius:12px;box-shadow:0 12px 30px -14px rgba(0,0,0,.8);align-self:center}
+.upl{font-size:.82rem;color:var(--crimson-deep);margin-top:8px}
 .upl input{font-size:.8rem;max-width:100%}
 
-@keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
-@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+@keyframes twinkle{0%,100%{opacity:.18;transform:scale(.7)}50%{opacity:1;transform:scale(1.3)}}
 @keyframes press{0%{transform:scale(1)}40%{transform:scale(.93)}100%{transform:scale(1.04)}}
 @keyframes eq{0%,100%{height:4px}50%{height:16px}}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes shoot{0%,74%{opacity:0;transform:translate(160px,-90px) rotate(-26deg)}78%{opacity:1}86%{opacity:0;transform:translate(-260px,150px) rotate(-26deg)}100%{opacity:0}}
 #journey.entering{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
   .js .rev:not(.in),.js .pw.rev:not(.in){opacity:1;transform:none}
-  .js .fl:not(.in) .head{transform:none}.js .fl:not(.in) .stem{stroke-dashoffset:0}.js .fl:not(.in) .leaf{opacity:1}
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
@@ -196,18 +248,25 @@ html[data-setup] .setup-only{display:block}
 <main>
   <!-- 1. Opening -->
   <section class="opening" id="opening" aria-labelledby="hello">
+    <div class="halftone" aria-hidden="true"></div>
     <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+    <span class="slash" style="top:18%;right:14%;--dl:1s" aria-hidden="true"></span>
+    <span class="slash" style="top:36%;right:26%;--dl:4.2s" aria-hidden="true"></span>
+    <span class="v-tag left" aria-hidden="true">心の言葉 ・ 君へ</span>
+    <span class="v-tag right" aria-hidden="true">大切な思い出</span>
     <div class="wrap">
-      <div class="open-flowers" aria-hidden="true">
-        <span class="fl" data-k="daisy" style="--s:78px;--d:.15s"></span>
-        <span class="fl" data-k="sunflower" style="--s:112px;--d:.4s"></span>
-        <span class="fl" data-k="tulip" style="--s:88px;--d:.65s"></span>
-        <span class="fl" data-k="white" style="--s:70px;--d:.9s"></span>
-      </div>
+      <span class="badge">✦ Episode 01 · For Tanu ✦</span>
       <h1 id="hello">Hey, Dear 🌷</h1>
       <p class="hand">There's something I've wanted to tell you.</p>
       <div class="env" id="env" aria-hidden="true">
-        <div class="back"></div><div class="paper">for you</div><div class="front"></div><div class="flap"></div>
+        <div class="back"></div>
+        <div class="paper">君へ</div>
+        <div class="front"></div>
+        <div class="flap"></div>
+        <div class="seal" aria-hidden="true">
+          <!-- Jujutsu High uniform swirl button motif -->
+          <svg viewBox="0 0 24 24"><path d="M12 12c0-2 1.8-3.2 3.4-2.4 2.2 1.1 2.4 4.3.6 6-2.3 2.2-6.1 1.7-7.8-1-2-3.2-1-7.6 2.3-9.4 3.6-2 8.2-.7 10 3"/></svg>
+        </div>
       </div>
       <button class="btn primary" id="openBtn" type="button">Open This Little Letter 💌</button>
     </div>
@@ -216,32 +275,40 @@ html[data-setup] .setup-only{display:block}
   <div id="journey" hidden>
     <!-- 2. Apology -->
     <section class="page apology" id="apology" aria-labelledby="apH">
+      <div class="halftone" aria-hidden="true"></div>
+      <span class="v-tag left" aria-hidden="true">ごめんね ・ 心から</span>
       <div class="wrap">
-        <h2 id="apH" class="rev">I'm Really Sorry</h2>
-        <article class="letter">
-          <p class="rev" style="--i:0">I know I made a mistake, and I won't run away from it. I can't undo the hurt I caused, but I can learn from it. I never wanted to become a reason for your sadness. I'm truly sorry. I hope someday you can remember me without pain. ❤️</p>
+        <h2 id="apH" class="rev">I'm Really Sorry.</h2>
+        <article class="letter rev" style="--i:0">
+          <span class="vn-plate">✦ Letter · To Tanu</span>
+          <p>I know I made a mistake, and I won't run away from it. I can't undo the hurt I caused, but I can learn from it. I never wanted to become a reason for your sadness. I'm truly sorry. I hope someday you can remember me without pain. ❤️</p>
         </article>
       </div>
     </section>
 
-    <!-- 3. Memories -->
+    <!-- 3. Memories + End Card -->
     <section class="page gallery" id="memories" aria-labelledby="gH">
+      <div class="sparkles" id="nightStars" aria-hidden="true"></div>
+      <span class="slash" style="top:14%;right:12%;--dl:.8s" aria-hidden="true"></span>
+      <span class="slash" style="top:68%;right:18%;--dl:3.6s" aria-hidden="true"></span>
+      <span class="v-tag right" aria-hidden="true">思い出の欠片</span>
       <div class="wrap wide">
+        <span class="badge rev">✦ Memories · 思い出 ✦</span>
         <h2 id="gH" class="rev">Little Moments, Big Memories ✨</h2>
         <p class="lede rev">Even ordinary moments can become beautiful memories when shared with a good friend.</p>
         <div class="polas">
           <figure class="pw rev" style="--r:-4deg;--i:0"><div class="polaroid">
-            <div class="photo"><img src="images/friendship1.jpg" alt="A friendship memory"><div class="ph"><span class="fl" data-k="blossom"></span><small class="setup-only">Add images/friendship1.jpg</small></div></div>
+            <div class="photo"><img src="images/friendship1.jpg" alt="A friendship memory"><div class="ph"><span style="font-size:2rem">🌸</span><small class="setup-only">Add images/friendship1.jpg</small></div></div>
             <figcaption>Little moments, unforgettable memories.</figcaption>
             <label class="setup-only upl">Replace photo (preview)<input type="file" accept="image/*" data-photo></label>
           </div></figure>
           <figure class="pw rev" style="--r:2.5deg;--i:1"><div class="polaroid">
-            <div class="photo"><img src="images/friendship2.jpg" alt="A friendship memory"><div class="ph"><span class="fl" data-k="daisy"></span><small class="setup-only">Add images/friendship2.jpg</small></div></div>
+            <div class="photo"><img src="images/friendship2.jpg" alt="A friendship memory"><div class="ph"><span style="font-size:2rem">✨</span><small class="setup-only">Add images/friendship2.jpg</small></div></div>
             <figcaption>Some memories always bring a smile.</figcaption>
             <label class="setup-only upl">Replace photo (preview)<input type="file" accept="image/*" data-photo></label>
           </div></figure>
           <figure class="pw rev" style="--r:-2deg;--i:2"><div class="polaroid">
-            <div class="photo"><img src="images/friendship3.jpg" alt="A friendship memory"><div class="ph"><span class="fl" data-k="white"></span><small class="setup-only">Add images/friendship3.jpg</small></div></div>
+            <div class="photo"><img src="images/friendship3.jpg" alt="A friendship memory"><div class="ph"><span style="font-size:2rem">❤️</span><small class="setup-only">Add images/friendship3.jpg</small></div></div>
             <figcaption>Friendship is special in its own little way.</figcaption>
             <label class="setup-only upl">Replace photo (preview)<input type="file" accept="image/*" data-photo></label>
           </div></figure>
@@ -250,7 +317,7 @@ html[data-setup] .setup-only{display:block}
         <div class="jp-close rev">
           <p class="jp">君が好き。🌸</p>
           <p class="romaji">Kimi ga suki.</p>
-          <p class="romaji">I like you. You're special to me.</p>
+          <span class="sub-line" aria-hidden="true"></span>
         </div>
       </div>
     </section>
@@ -275,51 +342,77 @@ var rnd=function(a,b){return a+Math.random()*(b-a)};
 var toastEl=$('#toast'),toastT;
 function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove('show')},3600)}
 
-/* ---------- flowers (inline SVG) ---------- */
-function P(n,rx,ry,cy,fill,st,off){off=off||0;var s='';for(var i=0;i<n;i++)s+='<ellipse rx="'+rx+'" ry="'+ry+'" cy="'+(-cy)+'" fill="'+fill+'" stroke="'+st+'" stroke-width=".8" transform="rotate('+(off+i*360/n)+')"/>';return s}
-var seeds='';[[0,0],[5,0],[-5,0],[0,5],[0,-5],[3.6,3.6],[-3.6,-3.6],[3.6,-3.6],[-3.6,3.6]].forEach(function(p){seeds+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.1" fill="#a86f3f"/>'});
-var HEADS={
- daisy:{y:52,svg:P(13,6,15,19,'#fffdfb','#e9d9e2')+'<circle r="9.5" fill="#ffd45e" stroke="#f0b93a" stroke-width="1.2"/>'},
- sunflower:{y:54,svg:P(16,6.5,16,25,'#ffbf2f','#e29a12')+P(16,6,14,23,'#ffd45e','#e9ab22',11.25)+'<circle r="14.5" fill="#7a4a2a"/><circle r="10.5" fill="#5e3820"/>'+seeds},
- white:{y:52,svg:P(6,10.5,13,16,'#ffffff','#d9cdea')+'<circle r="7" fill="#f6d77a"/>'},
- blossom:{y:52,svg:P(5,11,13.5,15.5,'#f7b2c8','#e0809f')+'<circle r="6" fill="#ffe7a3"/>'},
- tulip:{y:80,svg:'<path d="M-17-6C-19-30-8-40 0-46 8-40 19-30 17-6 10 8-10 8-17-6Z" fill="#f48fb1"/><path d="M-6-2C-12-22-4-36 0-42 4-36 12-22 6-2Z" fill="#f9bdd1"/><path d="M-17-6C-12-24-4-34 0-46-2-30-6-14-4 4-10 4-15 0-17-6Z" fill="#ec7aa2"/>'}
-};
-function flower(k){var h=HEADS[k]||HEADS.daisy;
- return '<svg viewBox="0 0 100 170" aria-hidden="true" focusable="false"><path class="stem" d="M50 '+(h.y+8)+'C47 '+(h.y+48)+' 54 '+(h.y+84)+' 50 168" fill="none" stroke="#7fb28b" stroke-width="3.2" stroke-linecap="round" pathLength="130"/>'+
- '<ellipse class="leaf" cx="37" cy="128" rx="12" ry="4.6" transform="rotate(-32 37 128)" fill="#a8d3b1"/><ellipse class="leaf" cx="63" cy="142" rx="12" ry="4.6" transform="rotate(30 63 142)" fill="#a8d3b1"/>'+
- '<g transform="translate(50 '+h.y+')"><g class="head">'+h.svg+'</g></g></svg>'}
-$$('.fl').forEach(function(el){el.innerHTML=flower(el.getAttribute('data-k'))});
-
 /* ---------- reveal on scroll ---------- */
-var targets=$$('.rev, .fl');
+var targets=$$('.rev');
 if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.18});
   targets.forEach(function(t){ if(!t.closest('.opening')) io.observe(t) });
 }else{targets.forEach(function(t){t.classList.add('in')})}
-setTimeout(function(){$$('.opening .fl').forEach(function(f){f.classList.add('in')})},reduce?0:250);
 
-/* ---------- sparkles ---------- */
-function dots(host,n,minS,maxS){var h=$(host),f=document.createDocumentFragment();for(var i=0;i<n;i++){var s=document.createElement('span'),z=rnd(minS,maxS);s.style.cssText='left:'+rnd(0,100)+'%;top:'+rnd(0,100)+'%;width:'+z+'px;height:'+z+'px;--t:'+rnd(2.4,5.5)+'s;--dl:'+rnd(-5,0)+'s';f.appendChild(s)}h.appendChild(f)}
-dots('#sparkles',26,2,5.5);
+/* ---------- cursed energy sparkles ---------- */
+function dots(host,n,minS,maxS){
+  var h=$(host);if(!h)return;
+  var cols=['rgba(0,229,255,.9)','rgba(230,46,69,.9)','rgba(255,122,144,.9)'];
+  var f=document.createDocumentFragment();
+  for(var i=0;i<n;i++){
+    var s=document.createElement('span'),z=rnd(minS,maxS);
+    s.style.cssText='left:'+rnd(0,100)+'%;top:'+rnd(0,100)+'%;width:'+z+'px;height:'+z+'px;--t:'+rnd(2.2,5)+'s;--dl:'+rnd(-5,0)+'s;--c:'+cols[i%3];
+    f.appendChild(s);
+  }
+  h.appendChild(f);
+}
+dots('#sparkles',36,1.8,4.2);
+dots('#nightStars',55,1.4,3.6);
 
-/* ---------- petal canvas ---------- */
-var cv=$('#petals'),cx=cv.getContext('2d'),W=0,H=0,DPR=1,petals=[];
-var COLORS=['#f9b9cc','#ffd0b3','#fff','#e8dcfa','#f6a6bf','#ffe3b0'];
+/* ---------- canvas: Cursed Energy Embers (Cyan/Crimson) + Coral Sakura ---------- */
+var cv=$('#petals'),cx=cv.getContext('2d'),W=0,H=0,DPR=1,petals=[],embers=[];
+var PCOLS=['#ff7a90','#ffa3b5','#ff5c77','#ffd0da'];
+var ECOLS=['#00e5ff','#ff2a4b','#ff7a90'];
 function resize(){DPR=Math.min(window.devicePixelRatio||1,2);W=window.innerWidth;H=window.innerHeight;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0)}
-function ambient(init){return {x:rnd(0,W),y:init?rnd(-20,H):rnd(-60,-10),r:rnd(5,10),vy:rnd(.35,.9),vx:0,sw:rnd(.6,1.6),ph:rnd(0,6.28),rot:rnd(0,6.28),vr:rnd(-.025,.025),c:COLORS[(Math.random()*COLORS.length)|0],a:rnd(.45,.75)}}
-function drawPetal(p){cx.save();cx.translate(p.x,p.y);cx.rotate(p.rot);cx.globalAlpha=p.a;cx.fillStyle=p.c;cx.beginPath();cx.ellipse(0,0,p.r*.55,p.r,0,0,6.2832);cx.fill();cx.globalAlpha=p.a*.5;cx.strokeStyle='rgba(224,128,159,.55)';cx.lineWidth=.8;cx.stroke();cx.restore()}
+function makePetal(init){return {x:rnd(-40,W+40),y:init?rnd(-20,H):rnd(-50,-10),s:rnd(5.5,11),vy:rnd(.5,1.15),vx:rnd(-.55,-.12),sw:rnd(.8,1.7),ph:rnd(0,6.28),rot:rnd(0,6.28),vr:rnd(-.03,.03),fl:rnd(0,6.28),vfl:rnd(.02,.05),c:PCOLS[(Math.random()*PCOLS.length)|0],a:rnd(.42,.75)}}
+function makeEmber(init){return {x:rnd(0,W),y:init?rnd(0,H):H+20,r:rnd(1.8,4.2),vy:rnd(-.95,-.3),ph:rnd(0,6.28),c:ECOLS[(Math.random()*ECOLS.length)|0],a:rnd(.3,.75)}}
+function drawSakura(p){
+  cx.save();cx.translate(p.x,p.y);cx.rotate(p.rot);
+  cx.scale(1,0.45+0.55*Math.abs(Math.cos(p.fl)));
+  cx.globalAlpha=p.a;cx.fillStyle=p.c;
+  var r=p.s;
+  cx.beginPath();
+  cx.moveTo(0,r*0.7);
+  cx.bezierCurveTo(-r*0.9,r*0.2,-r*0.85,-r*0.75,-r*0.18,-r*0.85);
+  cx.lineTo(0,-r*0.52);
+  cx.lineTo(r*0.18,-r*0.85);
+  cx.bezierCurveTo(r*0.85,-r*0.75,r*0.9,r*0.2,0,r*0.7);
+  cx.closePath();cx.fill();
+  cx.restore();
+}
 var raf=0,running=false;
 function frame(t){
   cx.clearRect(0,0,W,H);
+  for(var j=0;j<embers.length;j++){var e=embers[j];
+    e.y+=e.vy;e.x+=Math.sin(t/900+e.ph)*.45;
+    if(e.y<-24){embers[j]=makeEmber(false);continue}
+    cx.save();cx.globalAlpha=e.a*(.55+.45*Math.sin(t/500+e.ph));
+    var g=cx.createRadialGradient(e.x,e.y,0,e.x,e.y,e.r*3.2);
+    g.addColorStop(0,'#fff');g.addColorStop(.35,e.c);g.addColorStop(1,'rgba(0,0,0,0)');
+    cx.fillStyle=g;cx.beginPath();cx.arc(e.x,e.y,e.r*3.2,0,6.2832);cx.fill();cx.restore();
+  }
   for(var i=petals.length-1;i>=0;i--){var p=petals[i];
-    p.y+=p.vy;p.x+=Math.sin(t/1000*p.sw+p.ph)*.5;if(p.y>H+20){petals[i]=ambient(false);continue}
-    p.rot+=p.vr;drawPetal(p)}
-  raf=requestAnimationFrame(frame)}
+    p.y+=p.vy;p.x+=p.vx+Math.sin(t/1000*p.sw+p.ph)*.55;
+    p.rot+=p.vr;p.fl+=p.vfl;
+    if(p.y>H+24||p.x<-50){petals[i]=makePetal(false);continue}
+    drawSakura(p);
+  }
+  raf=requestAnimationFrame(frame);
+}
 function startPetals(){if(reduce||running)return;running=true;raf=requestAnimationFrame(frame)}
 resize();window.addEventListener('resize',resize);
-if(!reduce){var cnt=W<600?12:20;for(var i=0;i<cnt;i++)petals.push(ambient(true));startPetals();
-  document.addEventListener('visibilitychange',function(){if(document.hidden){cancelAnimationFrame(raf);running=false}else startPetals()})}
+if(!reduce){
+  var pCnt=W<600?12:20,eCnt=W<600?16:28;
+  for(var i=0;i<pCnt;i++)petals.push(makePetal(true));
+  for(var j=0;j<eCnt;j++)embers.push(makeEmber(true));
+  startPetals();
+  document.addEventListener('visibilitychange',function(){if(document.hidden){cancelAnimationFrame(raf);running=false}else startPetals()});
+}
 
 /* ---------- background music ---------- */
 var music=$('#musicAudio'),fab=$('#musicFab'),mMissing=false,mLbl=$('#musicLbl');
@@ -369,7 +462,7 @@ $('#skipOpen').addEventListener('click',function(){if(!opened){opened=true;showJ
 function localAudio(inp,el,after){inp.addEventListener('change',function(){var f=inp.files&&inp.files[0];if(!f)return;el.src=URL.createObjectURL(f);el.load();if(after)after();toast('Loaded for preview on this device only.')})}
 localAudio($('#prevMusic'),music,function(){mMissing=false});
 
-/* ---------- QR code + printable card ---------- */
+/* ---------- QR code + printable card (Yuji Itadori palette) ---------- */
 var qrIn=$('#qrUrl'),qrMake=$('#qrMake'),qrStatus=$('#qrStatus'),cardPrev=$('#cardPrev'),dlCard=$('#dlCard'),dlQr=$('#dlQr');
 var qrCanvas=null,cardCanvas=null,prevUrl=null,downloads=null;
 try{if(window.claude&&window.claude.use){window.claude.use('downloads').then(function(d){downloads=d}).catch(function(){})}}catch(e){}
@@ -383,26 +476,20 @@ function publicUrl(raw){
   u.hash='';return u.href}
 function renderQR(qr){
   var n=qr.getModuleCount(),q=4,s=Math.max(8,Math.ceil(1200/(n+2*q))),size=s*(n+2*q),c=document.createElement('canvas');c.width=c.height=size;var x=c.getContext('2d');
-  x.fillStyle='#fff';x.fillRect(0,0,size,size);x.fillStyle='#2b2033';
+  x.fillStyle='#fff';x.fillRect(0,0,size,size);x.fillStyle='#141829';
   for(var r=0;r<n;r++)for(var k=0;k<n;k++)if(qr.isDark(r,k))x.fillRect((k+q)*s,(r+q)*s,s,s);return c}
-function pet(x,cx_,cy_,n,len,wid,fill,st,rot){for(var i=0;i<n;i++){x.save();x.translate(cx_,cy_);x.rotate((rot||0)+i*2*Math.PI/n);x.beginPath();x.ellipse(0,-len,wid,len,0,0,6.2832);x.fillStyle=fill;x.fill();x.strokeStyle=st;x.lineWidth=2.5;x.stroke();x.restore()}}
-function circ(x,cx_,cy_,r,fill,st){x.beginPath();x.arc(cx_,cy_,r,0,6.2832);x.fillStyle=fill;x.fill();if(st){x.strokeStyle=st;x.lineWidth=3;x.stroke()}}
-function cDaisy(x,a,b,r){pet(x,a,b,13,r*.6,r*.17,'#fffdfb','#e5d3de');circ(x,a,b,r*.27,'#ffd45e','#f0b93a')}
-function cSun(x,a,b,r){pet(x,a,b,16,r*.62,r*.15,'#ffbf2f','#e29a12');pet(x,a,b,16,r*.56,r*.14,'#ffd45e','#e9ab22',Math.PI/16);circ(x,a,b,r*.34,'#7a4a2a');circ(x,a,b,r*.25,'#5e3820')}
-function cBlos(x,a,b,r){pet(x,a,b,5,r*.55,r*.3,'#f7b2c8','#e0809f');circ(x,a,b,r*.17,'#ffe7a3')}
 function wrapText(x,t,maxW){var w=t.split(' '),lines=[],cur='';w.forEach(function(s){var test=cur?cur+' '+s:s;if(x.measureText(test).width>maxW&&cur){lines.push(cur);cur=s}else cur=test});if(cur)lines.push(cur);return lines}
 function rr(x,a,b,w,h,r){x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath()}
 function renderCard(qr){
   var W2=1800,H2=2400,c=document.createElement('canvas');c.width=W2;c.height=H2;var x=c.getContext('2d');
-  var g=x.createLinearGradient(0,0,W2,H2);g.addColorStop(0,'#fff1e6');g.addColorStop(.5,'#fcdfe9');g.addColorStop(1,'#e4daf7');x.fillStyle=g;x.fillRect(0,0,W2,H2);
-  x.strokeStyle='#d6b46a';x.lineWidth=6;rr(x,70,70,W2-140,H2-140,90);x.stroke();x.lineWidth=2;x.globalAlpha=.7;rr(x,100,100,W2-200,H2-200,66);x.stroke();x.globalAlpha=1;
-  cSun(x,330,340,190);cDaisy(x,690,210,118);cBlos(x,1010,230,100);cDaisy(x,1450,340,170);cBlos(x,1700,150,84);cBlos(x,150,740,86);cDaisy(x,1690,790,88);
-  cBlos(x,330,2110,130);cSun(x,1480,2130,170);cDaisy(x,1180,2270,100);cDaisy(x,640,2280,96);cBlos(x,140,1860,78);cDaisy(x,1700,1790,74);
-  var n=qr.getModuleCount(),m=Math.floor(1100/(n+8)),P2=(n+8)*m,px=(W2-P2)/2,py=1170-P2/2;
-  x.save();x.shadowColor='rgba(120,70,120,.3)';x.shadowBlur=60;x.shadowOffsetY=24;x.fillStyle='#fffdf9';rr(x,px-34,py-34,P2+68,P2+68,64);x.fill();x.restore();
-  x.fillStyle='#2b2033';for(var r=0;r<n;r++)for(var k=0;k<n;k++)if(qr.isDark(r,k))x.fillRect(px+(k+4)*m,py+(r+4)*m,m,m);
-  x.fillStyle='#3f3047';x.textAlign='center';x.textBaseline='alphabetic';x.font='700 92px Caveat, "Segoe Script", cursive';
-  var lines=wrapText(x,'A little friendship letter for you. Scan when you feel like it. 🌷',1260),y0=py+P2+34+130;
+  var g=x.createLinearGradient(0,0,W2,H2);g.addColorStop(0,'#0a0c16');g.addColorStop(.55,'#191730');g.addColorStop(1,'#3d1324');x.fillStyle=g;x.fillRect(0,0,W2,H2);
+  x.strokeStyle='#e62e45';x.lineWidth=8;rr(x,70,70,W2-140,H2-140,80);x.stroke();
+  x.strokeStyle='rgba(0,229,255,.55)';x.lineWidth=2.5;rr(x,104,104,W2-208,H2-208,60);x.stroke();
+  var n=qr.getModuleCount(),m=Math.floor(1100/(n+8)),P2=(n+8)*m,px=(W2-P2)/2,py=1120-P2/2;
+  x.save();x.shadowColor='rgba(230,46,69,.45)';x.shadowBlur=70;x.fillStyle='#ffffff';rr(x,px-34,py-34,P2+68,P2+68,56);x.fill();x.restore();
+  x.fillStyle='#141829';for(var r=0;r<n;r++)for(var k=0;k<n;k++)if(qr.isDark(r,k))x.fillRect(px+(k+4)*m,py+(r+4)*m,m,m);
+  x.fillStyle='#fff';x.textAlign='center';x.textBaseline='alphabetic';x.font='700 88px Caveat, "Segoe Script", cursive';
+  var lines=wrapText(x,'A little letter for you. Scan when you feel like it. 🌸',1260),y0=py+P2+34+150;
   lines.forEach(function(l,i){x.fillText(l,W2/2,y0+i*108)});
   return c}
 function setDownloads(on){dlCard.disabled=!on;dlQr.disabled=!on}
@@ -411,7 +498,7 @@ qrMake.addEventListener('click',function(){
   var url=publicUrl(qrIn.value);
   if(!url){setDownloads(false);cardPrev.hidden=true;status('Paste the full public link, starting with https://. Links to localhost, local networks and files cannot be used.',true);return}
   try{
-    var fontsReady=(document.fonts&&document.fonts.load)?document.fonts.load('700 92px Caveat'):Promise.resolve();
+    var fontsReady=(document.fonts&&document.fonts.load)?document.fonts.load('700 88px Caveat'):Promise.resolve();
     status('Creating your card...');
     Promise.resolve(fontsReady).catch(function(){}).then(function(){
       var qr=qrcode(0,'Q');qr.addData(url,'Byte');qr.make();
