@@ -3,7 +3,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=Noto+Serif+JP:wght@400;500&family=Share+Tech+Mono&display=swap">
 <style>
 :root{
   --cream:#fff8f1; --paper:#fffdf9; --blush:#fbd3df; --rose:#d9718f; --peach:#ffd8bd;
@@ -100,6 +100,11 @@ button{font-family:inherit}
 .polaroid figcaption{font-family:var(--hand);font-size:1.5rem;line-height:1.15;padding:14px 6px 2px;color:var(--ink);text-wrap:balance}
 .setup-only{display:none}
 html[data-setup] .setup-only{display:block}
+
+/* closing Japanese line */
+.jp-close{margin-top:36px;padding-top:28px;border-top:1.5px dashed rgba(111,90,174,.25);width:min(100%,320px);display:flex;flex-direction:column;align-items:center;gap:6px}
+.jp-close .jp{font-family:'Noto Serif JP',var(--serif);font-size:clamp(1.6rem,6vw,2.1rem);font-weight:500;color:var(--ink);letter-spacing:.04em}
+.jp-close .romaji{font-family:var(--hand);font-size:clamp(1.45rem,5vw,1.8rem);color:var(--rose)}
 
 /* music button + toast */
 #musicFab{position:fixed;z-index:20;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:9px;min-height:48px;padding:0 18px 0 14px;border-radius:999px;border:2px solid rgba(255,255,255,.9);background:rgba(255,250,246,.92);color:#4a3b78;font:700 .92rem var(--sans);cursor:pointer;box-shadow:0 12px 26px -10px rgba(90,60,130,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
@@ -199,7 +204,7 @@ html[data-setup] .setup-only{display:block}
         <span class="fl" data-k="tulip" style="--s:88px;--d:.65s"></span>
         <span class="fl" data-k="white" style="--s:70px;--d:.9s"></span>
       </div>
-      <h1 id="hello">Hey, Dear 🌷</h1>
+      <h1 id="hello">Hey, Tanu 🌷</h1>
       <p class="hand">There's something I've wanted to tell you.</p>
       <div class="env" id="env" aria-hidden="true">
         <div class="back"></div><div class="paper">for you</div><div class="front"></div><div class="flap"></div>
@@ -212,7 +217,7 @@ html[data-setup] .setup-only{display:block}
     <!-- 2. Apology -->
     <section class="page apology" id="apology" aria-labelledby="apH">
       <div class="wrap">
-        <h2 id="apH" class="rev">I'm Really Sorry.</h2>
+        <h2 id="apH" class="rev">I'm Really Sorry, Tanu...</h2>
         <article class="letter">
           <p class="rev" style="--i:0">I know I made a mistake, and I won't run away from it. I can't undo the hurt I caused, but I can learn from it. I never wanted to become a reason for your sadness. I'm truly sorry. I hope someday you can remember me without pain. ❤️</p>
         </article>
@@ -240,6 +245,11 @@ html[data-setup] .setup-only{display:block}
             <figcaption>Friendship is special in its own little way.</figcaption>
             <label class="setup-only upl">Replace photo (preview)<input type="file" accept="image/*" data-photo></label>
           </div></figure>
+        </div>
+
+        <div class="jp-close rev">
+          <p class="jp">君が好き。🌸</p>
+          <p class="romaji">Kimi ga suki.</p>
         </div>
       </div>
     </section>
