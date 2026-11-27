@@ -199,7 +199,7 @@ html[data-setup] .setup-only{display:block}
         <span class="fl" data-k="tulip" style="--s:88px;--d:.65s"></span>
         <span class="fl" data-k="white" style="--s:70px;--d:.9s"></span>
       </div>
-      <h1 id="hello">Hey, Tanu 🌷</h1>
+      <h1 id="hello">Hey, Dear 🌷</h1>
       <p class="hand">There's something I've wanted to tell you.</p>
       <div class="env" id="env" aria-hidden="true">
         <div class="back"></div><div class="paper">for you</div><div class="front"></div><div class="flap"></div>
@@ -212,7 +212,7 @@ html[data-setup] .setup-only{display:block}
     <!-- 2. Apology -->
     <section class="page apology" id="apology" aria-labelledby="apH">
       <div class="wrap">
-        <h2 id="apH" class="rev">I'm Really Sorry, Tanu...</h2>
+        <h2 id="apH" class="rev">I'm Really Sorry.</h2>
         <article class="letter">
           <p class="rev" style="--i:0">I know I made a mistake, and I won't run away from it. I can't undo the hurt I caused, but I can learn from it. I never wanted to become a reason for your sadness. I'm truly sorry. I hope someday you can remember me without pain. ❤️</p>
         </article>
@@ -256,15 +256,37 @@ html[data-setup] .setup-only{display:block}
 <script>
 (function(){
 'use strict';
-var $=function(s,r){return (r\vert{}\vert{}document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 var rnd=function(a,b){return a+Math.random()*(b-a)};
 
 /* ---------- toast ---------- */
-var toastEl=$('#toast'),toastT; function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove('show')},3600)}  /* ---------- flowers (inline SVG) ---------- */ function P(n,rx,ry,cy,fill,st,off){off=off\vert{}\vert{}0;var s='';for(var i=0;i<n;i++)s+='<ellipse rx="'+rx+'" ry="'+ry+'" cy="'+(-cy)+'" fill="'+fill+'" stroke="'+st+'" stroke-width=".8" transform="rotate('+(off+i*360/n)+')"/>';return s} var seeds='';[[0,0],[5,0],[-5,0],[0,5],[0,-5],[3.6,3.6],[-3.6,-3.6],[3.6,-3.6],[-3.6,3.6]].forEach(function(p){seeds+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.1" fill="#a86f3f"/>'}); var HEADS={ daisy:{y:52,svg:P(13,6,15,19,'#fffdfb','#e9d9e2')+'<circle r="9.5" fill="#ffd45e" stroke="#f0b93a" stroke-width="1.2"/>'}, sunflower:{y:54,svg:P(16,6.5,16,25,'#ffbf2f','#e29a12')+P(16,6,14,23,'#ffd45e','#e9ab22',11.25)+'<circle r="14.5" fill="#7a4a2a"/><circle r="10.5" fill="#5e3820"/>'+seeds}, white:{y:52,svg:P(6,10.5,13,16,'#ffffff','#d9cdea')+'<circle r="7" fill="#f6d77a"/>'}, blossom:{y:52,svg:P(5,11,13.5,15.5,'#f7b2c8','#e0809f')+'<circle r="6" fill="#ffe7a3"/>'}, tulip:{y:80,svg:'<path d="M-17-6C-19-30-8-40 0-46 8-40 19-30 17-6 10 8-10 8-17-6Z" fill="#f48fb1"/><path d="M-6-2C-12-22-4-36 0-42 4-36 12-22 6-2Z" fill="#f9bdd1"/><path d="M-17-6C-12-24-4-34 0-46-2-30-6-14-4 4-10 4-15 0-17-6Z" fill="#ec7aa2"/>'} }; function flower(k){var h=HEADS[k]\vert{}\vert{}HEADS.daisy; return '<svg viewBox="0 0 100 170" aria-hidden="true" focusable="false"><path class="stem" d="M50 '+(h.y+8)+'C47 '+(h.y+48)+' 54 '+(h.y+84)+' 50 168" fill="none" stroke="#7fb28b" stroke-width="3.2" stroke-linecap="round" pathLength="130"/>'+ '<ellipse class="leaf" cx="37" cy="128" rx="12" ry="4.6" transform="rotate(-32 37 128)" fill="#a8d3b1"/><ellipse class="leaf" cx="63" cy="142" rx="12" ry="4.6" transform="rotate(30 63 142)" fill="#a8d3b1"/>'+ '<g transform="translate(50 '+h.y+')"><g class="head">'+h.svg+'</g></g></svg>'} $$('.fl').forEach(function(el){el.innerHTML=flower(el.getAttribute('data-k'))});
+var toastEl=$('#toast'),toastT;
+function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove('show')},3600)}
+
+/* ---------- flowers (inline SVG) ---------- */
+function P(n,rx,ry,cy,fill,st,off){off=off||0;var s='';for(var i=0;i<n;i++)s+='<ellipse rx="'+rx+'" ry="'+ry+'" cy="'+(-cy)+'" fill="'+fill+'" stroke="'+st+'" stroke-width=".8" transform="rotate('+(off+i*360/n)+')"/>';return s}
+var seeds='';[[0,0],[5,0],[-5,0],[0,5],[0,-5],[3.6,3.6],[-3.6,-3.6],[3.6,-3.6],[-3.6,3.6]].forEach(function(p){seeds+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.1" fill="#a86f3f"/>'});
+var HEADS={
+ daisy:{y:52,svg:P(13,6,15,19,'#fffdfb','#e9d9e2')+'<circle r="9.5" fill="#ffd45e" stroke="#f0b93a" stroke-width="1.2"/>'},
+ sunflower:{y:54,svg:P(16,6.5,16,25,'#ffbf2f','#e29a12')+P(16,6,14,23,'#ffd45e','#e9ab22',11.25)+'<circle r="14.5" fill="#7a4a2a"/><circle r="10.5" fill="#5e3820"/>'+seeds},
+ white:{y:52,svg:P(6,10.5,13,16,'#ffffff','#d9cdea')+'<circle r="7" fill="#f6d77a"/>'},
+ blossom:{y:52,svg:P(5,11,13.5,15.5,'#f7b2c8','#e0809f')+'<circle r="6" fill="#ffe7a3"/>'},
+ tulip:{y:80,svg:'<path d="M-17-6C-19-30-8-40 0-46 8-40 19-30 17-6 10 8-10 8-17-6Z" fill="#f48fb1"/><path d="M-6-2C-12-22-4-36 0-42 4-36 12-22 6-2Z" fill="#f9bdd1"/><path d="M-17-6C-12-24-4-34 0-46-2-30-6-14-4 4-10 4-15 0-17-6Z" fill="#ec7aa2"/>'}
+};
+function flower(k){var h=HEADS[k]||HEADS.daisy;
+ return '<svg viewBox="0 0 100 170" aria-hidden="true" focusable="false"><path class="stem" d="M50 '+(h.y+8)+'C47 '+(h.y+48)+' 54 '+(h.y+84)+' 50 168" fill="none" stroke="#7fb28b" stroke-width="3.2" stroke-linecap="round" pathLength="130"/>'+
+ '<ellipse class="leaf" cx="37" cy="128" rx="12" ry="4.6" transform="rotate(-32 37 128)" fill="#a8d3b1"/><ellipse class="leaf" cx="63" cy="142" rx="12" ry="4.6" transform="rotate(30 63 142)" fill="#a8d3b1"/>'+
+ '<g transform="translate(50 '+h.y+')"><g class="head">'+h.svg+'</g></g></svg>'}
+$$('.fl').forEach(function(el){el.innerHTML=flower(el.getAttribute('data-k'))});
 
 /* ---------- reveal on scroll ---------- */
-var targets=$$('.rev, .fl'); if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.18}); targets.forEach(function(t){ if(!t.closest('.opening')) io.observe(t) }); }else{targets.forEach(function(t){t.classList.add('in')})} setTimeout(function(){$$('.opening .fl').forEach(function(f){f.classList.add('in')})},reduce?0:250);
+var targets=$$('.rev, .fl');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.18});
+  targets.forEach(function(t){ if(!t.closest('.opening')) io.observe(t) });
+}else{targets.forEach(function(t){t.classList.add('in')})}
+setTimeout(function(){$$('.opening .fl').forEach(function(f){f.classList.add('in')})},reduce?0:250);
 
 /* ---------- sparkles ---------- */
 function dots(host,n,minS,maxS){var h=$(host),f=document.createDocumentFragment();for(var i=0;i<n;i++){var s=document.createElement('span'),z=rnd(minS,maxS);s.style.cssText='left:'+rnd(0,100)+'%;top:'+rnd(0,100)+'%;width:'+z+'px;height:'+z+'px;--t:'+rnd(2.4,5.5)+'s;--dl:'+rnd(-5,0)+'s';f.appendChild(s)}h.appendChild(f)}
@@ -299,7 +321,33 @@ fab.addEventListener('click',function(){
   if(music.paused){var pr=music.play();if(pr&&pr.catch)pr.catch(function(){toast("The music couldn't start. Please try again.")})}else music.pause()});
 
 /* ---------- opening ---------- */
-var opening=$('#opening'),journey=$('#journey'),openBtn=$('#openBtn'),env=$('#env'),opened=false; function showJourney(){ opening.hidden=true; journey.hidden=false; journey.classList.add('entering'); fab.hidden=false; window.scrollTo(0,0); } openBtn.addEventListener('click',function(){ if(opened)return;opened=true; if(!mMissing && !music.error) { var pr = music.play(); if(pr && pr.catch) pr.catch(function(){}); } if(reduce){showJourney();return} openBtn.classList.add('pressed');env.classList.add('open'); setTimeout(function(){opening.classList.add('leaving')},1100); setTimeout(showJourney,2000); });  /* ---------- photos ---------- */ $$('.photo').forEach(function(ph){var img=$('img',ph); function miss(){ph.classList.add('miss')} img.addEventListener('error',miss);img.addEventListener('load',function(){ph.classList.remove('miss')}); if(img.complete&&img.naturalWidth===0)miss(); }); $$('input[data-photo]').forEach(function(inp){inp.addEventListener('change',function(){
+var opening=$('#opening'),journey=$('#journey'),openBtn=$('#openBtn'),env=$('#env'),opened=false;
+function showJourney(){
+  opening.hidden=true;
+  journey.hidden=false;
+  journey.classList.add('entering');
+  fab.hidden=false;
+  window.scrollTo(0,0);
+}
+openBtn.addEventListener('click',function(){
+  if(opened)return;opened=true;
+  if(!mMissing && !music.error) {
+    var pr = music.play();
+    if(pr && pr.catch) pr.catch(function(){});
+  }
+  if(reduce){showJourney();return}
+  openBtn.classList.add('pressed');env.classList.add('open');
+  setTimeout(function(){opening.classList.add('leaving')},1100);
+  setTimeout(showJourney,2000);
+});
+
+/* ---------- photos ---------- */
+$$('.photo').forEach(function(ph){var img=$('img',ph);
+  function miss(){ph.classList.add('miss')}
+  img.addEventListener('error',miss);img.addEventListener('load',function(){ph.classList.remove('miss')});
+  if(img.complete&&img.naturalWidth===0)miss();
+});
+$$('input[data-photo]').forEach(function(inp){inp.addEventListener('change',function(){
   var f=inp.files&&inp.files[0];if(!f)return;var ph=inp.closest('.polaroid').querySelector('.photo');
   $('img',ph).src=URL.createObjectURL(f);toast('Preview only. To publish this photo, add it to the images folder.')})});
 
@@ -358,4 +406,17 @@ qrMake.addEventListener('click',function(){
       var qr=qrcode(0,'Q');qr.addData(url,'Byte');qr.make();
       qrCanvas=renderQR(qr);cardCanvas=renderCard(qr);
       cardCanvas.toBlob(function(bl){if(prevUrl)URL.revokeObjectURL(prevUrl);prevUrl=URL.createObjectURL(bl);cardPrev.src=prevUrl;cardPrev.hidden=false});
-      setDownloads(true
+      setDownloads(true);status('QR code made for: '+url+'  Scan the preview with your phone before printing.',false)})
+  }catch(e){setDownloads(false);status('The QR code could not be created from that link. Check it and try again.',true)}
+});
+qrIn.addEventListener('input',function(){setDownloads(false)});
+function savePng(canvas,name){
+  if(!canvas)return;
+  if(!downloads){toast('Press and hold the preview picture to save it.');return}
+  canvas.toBlob(function(bl){downloads.save({filename:name,data:bl}).then(function(){toast('Saved.')}).catch(function(e){if(e&&e.code==='declined')return;toast('This view cannot save files. Press and hold the preview picture to save it.')})},'image/png')}
+dlCard.addEventListener('click',function(){savePng(cardCanvas,'friendship-qr-card.png')});
+dlQr.addEventListener('click',function(){savePng(qrCanvas,'friendship-qr-code.png')});
+})();
+</script>
+
+</body></html>
